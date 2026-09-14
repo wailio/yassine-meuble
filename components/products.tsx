@@ -5,7 +5,6 @@ import { ChevronLeft, ChevronRight, Heart } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 import { allProducts as catalogProducts, type Product } from "@/lib/products"
 import { Reveal } from "@/components/Reveal"
-import { ProductCardHome } from "@/components/product-card-home"
 import { PopTitle } from "@/components/pop-title"
 import { useLanguage } from "@/components/language-provider"
 import { usePathname } from "next/navigation"
@@ -355,17 +354,12 @@ export default function Products() {
             >
             {nosProduits.map((product, i) => (
               <div key={product.id} className="shrink-0">
-                <div className="md:hidden">
-                  <ProductCard
-                    immediate={i === 0 || isProductsPage}
-                    product={locale === "ar" && arabicProductDescriptions[product.id] ? { ...product, description: arabicProductDescriptions[product.id] } : product}
-                    favorites={favorites}
+                <ProductCard
+                  immediate={i === 0 || isProductsPage}
+                  product={locale === "ar" && arabicProductDescriptions[product.id] ? { ...product, description: arabicProductDescriptions[product.id] } : product}
+                  favorites={favorites}
                     toggleFavorite={toggleFavorite}
                   />
-                </div>
-                <div className="hidden md:block">
-                  <ProductCardHome product={product} favorites={favorites} toggleFavorite={toggleFavorite} />
-                </div>
               </div>
             ))}
             </div>
@@ -404,17 +398,12 @@ export default function Products() {
             >
               {modelesPrets.map((product, i) => (
                 <div key={product.id} className="shrink-0">
-                  <div className="md:hidden">
-                    <ProductCard
-                      immediate={i === 0 || isProductsPage}
-                      product={locale === "ar" && arabicProductDescriptions[product.id] ? { ...product, description: arabicProductDescriptions[product.id] } : product}
-                      favorites={favorites}
-                      toggleFavorite={toggleFavorite}
-                    />
-                  </div>
-                  <div className="hidden md:block">
-                    <ProductCardHome product={product} favorites={favorites} toggleFavorite={toggleFavorite} />
-                  </div>
+                  <ProductCard
+                    immediate={i === 0 || isProductsPage}
+                    product={locale === "ar" && arabicProductDescriptions[product.id] ? { ...product, description: arabicProductDescriptions[product.id] } : product}
+                    favorites={favorites}
+                    toggleFavorite={toggleFavorite}
+                  />
                 </div>
               ))}
             </div>
