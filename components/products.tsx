@@ -227,28 +227,24 @@ const legacyProducts: LegacyProduct[] = [
 
 function ProductCard({ product, favorites, toggleFavorite, immediate = false }: { product: Product; favorites: number[]; toggleFavorite: (id: number) => void; immediate?: boolean }) {
   const card = (
-    <Link href={`/product/${product.id}`}>
-      <div className="group flex h-[300px] flex-shrink-0 w-56 flex-col overflow-hidden rounded-none bg-[#1A1A1A] transition-colors duration-300 cursor-pointer md:h-auto md:w-[350px]">
-          <div className="relative aspect-[4/3] w-full items-center justify-center overflow-hidden bg-[#111111]">
-            {product.discount && <div className="absolute left-2 top-2 z-10 rounded bg-[rgba(15,15,15,0.85)] px-2.5 py-1 text-[10px] font-bold text-white">-{product.discount}%</div>}
-            <img src="/images/art-home-living-room.png" alt={product.name} className="h-full w-full object-cover transition-[filter] duration-300 group-hover:brightness-105" />
-            <button onClick={(e) => { e.preventDefault(); toggleFavorite(product.id) }} aria-label={`Ajouter ${product.name} aux favoris`} className="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-[rgba(0,0,0,0.4)] transition-colors hover:bg-[rgba(0,0,0,0.6)]">
-              <Heart className={`h-4 w-4 ${favorites.includes(product.id) ? "fill-white text-white" : "text-white"}`} />
-            </button>
-          </div>
-          <div className="flex flex-1 flex-col justify-between bg-[#1A1A1A] p-4 md:p-5">
-            <div>
-              <p className="mb-1 text-[9px] uppercase tracking-[0.12em] text-[#A8926A]">IdealInstitute</p>
-              <h3 className="line-clamp-2 text-sm font-bold text-[#F5F2EA] md:text-base">{product.name}</h3>
-              <p className="mt-2 hidden line-clamp-2 text-[11px] leading-4 text-[#9A9A9A] md:block md:text-xs">{product.description}</p>
-            </div>
-            <div className="mt-5 flex items-center gap-3">
-              <span className="text-sm font-bold text-[#F5F2EA] md:text-base">{product.price}</span>
-              {product.originalPrice && <span className="text-[10px] text-[#6B6B6B] line-through md:text-xs">{product.originalPrice}</span>}
-            </div>
+    <Link href={`/product/${product.id}`} className="group block w-56 flex-shrink-0 cursor-pointer md:w-[350px]">
+      <article>
+        <div className="relative aspect-[4/3] overflow-hidden bg-[#111111] md:aspect-[1/0.86]">
+          {product.discount && <span className="absolute left-4 top-4 z-10 text-[10px] font-medium uppercase tracking-[0.18em] text-[#b6a27a]">-{product.discount}%</span>}
+          <img src={product.image} alt={product.name} className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.025]" />
+          <button onClick={(e) => { e.preventDefault(); toggleFavorite(product.id) }} aria-label={`Ajouter ${product.name} aux favoris`} className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center text-white/80 transition-colors hover:text-white">
+            <Heart className={`h-4 w-4 ${favorites.includes(product.id) ? "fill-white text-white" : "text-white"}`} />
+          </button>
+        </div>
+        <div className="flex items-start justify-between gap-6 bg-transparent px-1 pb-1 pt-4 md:min-h-[104px] md:gap-10 md:pt-7">
+          <h3 className="max-w-[68%] text-[13px] font-medium leading-[1.35] tracking-[0.02em] text-[#f3f0e8] md:text-[19px] md:leading-[1.18]">{product.name}</h3>
+          <div className="shrink-0 text-right">
+            <span className="block whitespace-nowrap text-[12px] font-medium tracking-[0.04em] text-[#f3f0e8] md:text-[15px]">{product.price}</span>
+            {product.originalPrice && <span className="mt-1 block whitespace-nowrap text-[10px] tracking-[0.04em] text-white/35 line-through md:text-[11px]">{product.originalPrice}</span>}
           </div>
         </div>
-      </Link>
+      </article>
+    </Link>
   )
 
   return immediate ? (
