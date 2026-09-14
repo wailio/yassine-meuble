@@ -38,7 +38,7 @@ export default function Header() {
         <Link href="/" className="site-logo flex items-center gap-2">
           <span className="group inline-block cursor-pointer">
             <Image
-              src="/yassine-meubles-wordmark.png"
+              src="/yassine-meubles-mobile.png"
               alt="Yassine Meubles"
               width={2048}
               height={1024}
