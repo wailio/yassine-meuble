@@ -7,7 +7,7 @@ type StoryItem = {
   type: "image" | "video" | "instagram"
   src: string
   href: string
-  platform: "instagram" | "facebook"
+  platform: "instagram" | "facebook" | "tiktok"
   alt: string
 }
 
@@ -30,23 +30,27 @@ const stories: StoryItem[] = [
     alt: "Yassine Meubles Facebook inspiration",
   },
   {
+    type: "video",
+    src: "/yassine-meubles-tiktok.mp4",
+    href: "https://www.tiktok.com/@yassine_meubles_",
+    platform: "tiktok",
+    alt: "Yassine Meubles TikTok inspiration",
+  },
+  {
     type: "image",
     src: previewPhoto,
     href: "https://www.instagram.com/mobenia_furniture/",
     platform: "instagram",
     alt: "Elegant living room with custom curtains and seating",
   },
-  {
-    type: "image",
-    src: previewPhoto,
-    href: "https://www.facebook.com/REPLACE_WITH_YOUR_PAGE",
-    platform: "facebook",
-    alt: "Elegant living room with custom curtains and seating",
-  },
 ]
 
-function PlatformIcon({ platform }: { platform: "instagram" | "facebook" }) {
-  return platform === "instagram" ? (
+function PlatformIcon({ platform }: { platform: "instagram" | "facebook" | "tiktok" }) {
+  return platform === "tiktok" ? (
+    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true">
+      <path d="M15.7 3c.4 2.2 1.6 3.7 3.8 4.1v3.1a8.1 8.1 0 0 1-3.8-1.1v6.1a5.8 5.8 0 1 1-5-5.7v3.2a2.7 2.7 0 1 0 2 2.6V3h3Z" />
+    </svg>
+  ) : platform === "instagram" ? (
     <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
       <rect x="3" y="3" width="18" height="18" rx="5" />
       <circle cx="12" cy="12" r="4" />
