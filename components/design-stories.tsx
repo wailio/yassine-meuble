@@ -4,7 +4,7 @@ import Image from "next/image"
 import { PopTitle } from "@/components/pop-title"
 
 type StoryItem = {
-  type: "image" | "video"
+  type: "image" | "video" | "instagram"
   src: string
   href: string
   platform: "instagram" | "facebook"
@@ -16,9 +16,9 @@ const previewPhoto =
 
 const stories: StoryItem[] = [
   {
-    type: "image",
-    src: previewPhoto,
-    href: "https://www.instagram.com/mobenia_furniture/",
+    type: "instagram",
+    src: "https://www.instagram.com/p/DWcDIRpiPYM/embed/",
+    href: "https://www.instagram.com/yassine.meubles/",
     platform: "instagram",
     alt: "Elegant living room with custom curtains and seating",
   },
@@ -84,7 +84,16 @@ export function DesignStories() {
             rel="noopener noreferrer"
             className="group relative aspect-[2/3] w-[45%] shrink-0 snap-center overflow-hidden rounded-2xl border border-black/5 shadow-sm md:aspect-[7/10] md:w-auto md:shrink md:snap-none"
           >
-            {item.type === "video" ? (
+            {item.type === "instagram" ? (
+              <iframe
+                src={item.src}
+                title={item.alt}
+                loading={i === 0 ? "eager" : "lazy"}
+                allow="autoplay; encrypted-media; picture-in-picture"
+                scrolling="no"
+                className="pointer-events-none absolute inset-0 h-full w-full border-0"
+              />
+            ) : item.type === "video" ? (
               <video
                 src={item.src}
                 autoPlay
