@@ -240,7 +240,6 @@ function ProductCard({ product, favorites, toggleFavorite, immediate = false }: 
             <div>
               <p className="mb-1 text-[9px] uppercase tracking-[0.12em] text-[#A8926A]">IdealInstitute</p>
               <h3 className="line-clamp-2 text-sm font-bold text-[#F5F2EA] md:text-base">{product.name}</h3>
-              <p className="mt-2 hidden line-clamp-2 text-[11px] leading-4 text-[#9A9A9A] md:block md:text-xs">{product.description}</p>
             </div>
             <div className="mt-5 flex items-center gap-3">
               <span className="text-sm font-bold text-[#F5F2EA] md:text-base">{product.price}</span>
