@@ -23,11 +23,11 @@ const stories: StoryItem[] = [
     alt: "Yassine Meubles inspiration video",
   },
   {
-    type: "image",
-    src: previewPhoto,
-    href: "https://www.instagram.com/mobenia_furniture/",
-    platform: "instagram",
-    alt: "Elegant living room with custom curtains and seating",
+    type: "video",
+    src: "/yassine-meubles-facebook.mp4",
+    href: "https://www.facebook.com/p/Yassine-Meubles-61578165012936",
+    platform: "facebook",
+    alt: "Yassine Meubles Facebook inspiration",
   },
   {
     type: "image",
@@ -103,7 +103,10 @@ export function DesignStories() {
                 aria-label={item.alt}
                 preload="auto"
                 onLoadedData={(event) => { void event.currentTarget.play() }}
-                onPause={(event) => { void event.currentTarget.play() }}
+                onCanPlay={(event) => { void event.currentTarget.play() }}
+                onPause={(event) => {
+                  window.setTimeout(() => { void event.currentTarget.play() }, 0)
+                }}
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             ) : (
