@@ -67,7 +67,7 @@ export function DesignStories() {
 
       <div
         data-lenis-prevent
-        className="mx-auto flex max-w-[1240px] justify-center gap-4 overflow-x-auto snap-x snap-mandatory pb-2 [-ms-overflow-style:none] [scrollbar-width:none] md:grid md:grid-cols-3 md:gap-7 md:overflow-visible md:pb-0 [&::-webkit-scrollbar]:hidden"
+        className="mx-auto flex max-w-[1240px] justify-center gap-4 overflow-x-auto snap-x snap-mandatory pb-2 [-ms-overflow-style:none] [scrollbar-width:none] md:gap-7 md:overflow-visible md:pb-0 md:[&>*]:w-[calc((100%_-_84px)/4)] [&::-webkit-scrollbar]:hidden"
       >
         {stories.map((item) => (
           <a
@@ -75,7 +75,7 @@ export function DesignStories() {
             href={item.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative aspect-[2/3] w-[45%] shrink-0 snap-center overflow-hidden rounded-2xl border border-black/5 shadow-sm md:aspect-[7/10] md:w-auto md:shrink md:snap-none"
+            className="group relative aspect-[2/3] w-[45%] shrink-0 snap-center overflow-hidden rounded-2xl border border-black/5 shadow-sm md:aspect-[7/10] md:shrink-0 md:snap-none"
           >
             <video
               src={item.src}
