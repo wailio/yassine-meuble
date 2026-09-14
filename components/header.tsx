@@ -38,10 +38,10 @@ export default function Header() {
         <Link href="/" className="site-logo flex items-center gap-2">
           <span className="group inline-block cursor-pointer">
             <Image
-              src="/yassine-meubles-logo.png"
+              src="/yassine-meubles-wordmark.png"
               alt="Yassine Meubles"
-              width={2176}
-              height={736}
+              width={2048}
+              height={1024}
               className="h-10 w-auto max-w-[185px] object-contain transition-transform duration-[450ms] ease-out group-hover:scale-[1.04]"
             />
           </span>
