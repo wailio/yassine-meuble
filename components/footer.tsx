@@ -148,9 +148,9 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
             <h3 className="relative mb-3 mt-7 w-fit text-sm font-semibold uppercase tracking-[0.16em] after:absolute after:-bottom-1 after:left-0 after:h-px after:w-5 after:bg-[#c99b4d]">Assistance</h3>
             <nav className="flex flex-col"><FooterLink href="/contact">Livraison & retours</FooterLink><FooterLink href="/contact">Service client</FooterLink></nav>
             <div className="mt-6 flex gap-4 text-[#a98661]">
-              <Link href="https://facebook.com/profile.php?id=61564367111112" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook className="h-5 w-5" /></Link>
-              <Link href="https://instagram.com/art_home_tex" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram className="h-5 w-5" /></Link>
-              <Link href="https://tiktok.com/@art_home_textile" target="_blank" rel="noreferrer" aria-label="TikTok"><Music2 className="h-5 w-5" /></Link>
+              <Link href="https://www.facebook.com/p/Yassine-Meubles-61578165012936" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook className="h-5 w-5" /></Link>
+              <Link href="https://www.instagram.com/yassine.meubles/" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram className="h-5 w-5" /></Link>
+              <Link href="https://www.tiktok.com/@yassine_meubles_" target="_blank" rel="noreferrer" aria-label="TikTok"><Music2 className="h-5 w-5" /></Link>
             </div>
           </section>
         </div>
