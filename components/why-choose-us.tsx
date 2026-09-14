@@ -70,7 +70,7 @@ export default function WhyChooseUs() {
         <div className="mb-6 md:mb-16 text-center">
           <Reveal>
             <h2 className="text-xl font-serif font-semibold text-[#1f2937] md:text-[44px] md:text-[#0a0a0a]">
-              Pourquoi <span className="text-[#a98661] md:hidden">nous choisir</span><span className="hidden md:inline text-[#a98661]">choisir Art Home</span>
+              Pourquoi <span className="text-[#a98661] md:hidden">nous choisir</span><span className="hidden md:inline text-[#a98661]">choisir Yassine Meubles</span>
             </h2>
           </Reveal>
         </div>

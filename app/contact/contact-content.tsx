@@ -10,9 +10,9 @@ import { Button } from "@/components/ui/button"
 import { Reveal } from "@/components/Reveal"
 
 const contactDetails = [
-  { icon: Phone, label: "Téléphone", value: "0540 61 18 14" },
+  { icon: Phone, label: "Téléphone", value: "0558 64 60 54" },
   { icon: Mail, label: "Email", value: "naouihakim044@gmail.com" },
-  { icon: MapPin, label: "Adresse", value: "Birkhadem, Algérie" },
+  { icon: MapPin, label: "Adresse", value: "Koléa, Tipaza" },
   { icon: Clock3, label: "Horaires", value: "10:00–21:30 (sauf vendredi 15:00–21:30)" },
 ]
 
@@ -80,7 +80,7 @@ export default function ContactContent() {
 
     const { name: nom, phone: telephone, subject: sujet, message } = formData
     const whatsappMessage = `Nouveau message depuis le site :\n\nNom: ${nom}\nTéléphone: ${telephone}\nSujet: ${sujet}\nMessage: ${message}`
-    const nextWhatsappUrl = `https://wa.me/213540611814?text=${encodeURIComponent(whatsappMessage)}`
+    const nextWhatsappUrl = `https://wa.me/213558646054?text=${encodeURIComponent(whatsappMessage)}`
     setWhatsappUrl(nextWhatsappUrl)
     setIsQrCodeFailed(false)
 
@@ -103,7 +103,7 @@ export default function ContactContent() {
   return (
     <main className="min-h-screen bg-[#1b1b1b] text-[#f6f1e9]">
       <section className="relative flex min-h-[160px] items-center justify-center overflow-hidden pt-12 md:min-h-[330px] md:pt-28">
-        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%205%20sept.%202026%2C%2023_40_34-FB42McgzJXef34gaZjscdR4BOn6eZJ.png" alt="Salle à manger Art Home avec table ronde et chaises" className="absolute inset-0 h-full w-full object-cover object-center opacity-40 blur-[1px]" />
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%205%20sept.%202026%2C%2023_40_34-FB42McgzJXef34gaZjscdR4BOn6eZJ.png" alt="Salle à manger Yassine Meubles avec table ronde et chaises" className="absolute inset-0 h-full w-full object-cover object-center opacity-40 blur-[1px]" />
         <div className="absolute inset-0 bg-[#111111]/70" />
         <Reveal delay={0}>
           <h1 className="relative z-10 font-sans text-2xl font-bold tracking-[-0.04em] text-white md:text-6xl">Contactez-nous</h1>
@@ -177,7 +177,7 @@ export default function ContactContent() {
         </div>
 
         <div className="mt-8 mb-16 overflow-hidden rounded-2xl border border-[#b07a24]/45 md:mt-16 md:mb-12">
-          <MapReveal src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25590.335787715285!2d3.033506074316419!3d36.703536500000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fadd347613117%3A0xfc8ed47908ab92e9!2zQXJ0IGhvbWUg2KjZitiqINin2YTZgdmG!5e0!3m2!1sfr!2sdz!4v1788902144829!5m2!1sfr!2sdz" title="Art Home à Birkhadem" />
+          <MapReveal src="https://www.google.com/maps?q=Koléa,+Tipaza&output=embed" title="Yassine Meubles à Koléa, Tipaza" />
         </div>
       </section>
 

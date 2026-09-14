@@ -6,7 +6,7 @@ import AllProductsClientContent from "./client-content"
 import { Reveal } from "@/components/Reveal"
 
 export const metadata = {
-  title: "Tous les Produits | Art Home",
+  title: "Tous les Produits | Yassine Meubles",
   description: "Découvrez notre collection complète de meubles de luxe",
 }
 

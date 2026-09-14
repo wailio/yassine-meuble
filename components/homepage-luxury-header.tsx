@@ -30,8 +30,8 @@ export default function HomepageLuxuryHeader() {
           <Link href="/" className="site-logo flex items-center flex-shrink-0 hover:opacity-80 transition-opacity">
             <span className="group inline-block cursor-pointer">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%208%20sept.%202026%2C%2018_04_10-oe2G6zu2D6kvoMxWZ7Z73rYFvhOLGA.png"
-                alt="ArtHome"
+                src="/yassine-meubles-logo.png"
+                alt="Yassine Meubles"
                 width={1254}
                 height={1254}
                 className="h-36 w-36 object-contain transition-transform duration-[450ms] ease-out group-hover:scale-[1.06]"
