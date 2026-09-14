@@ -106,10 +106,11 @@ export function DesignStories() {
                 playsInline
                 aria-label={item.alt}
                 preload="auto"
-                onLoadedData={(event) => { void event.currentTarget.play() }}
-                onCanPlay={(event) => { void event.currentTarget.play() }}
+                onLoadedData={(event) => { void event.currentTarget.play().catch(() => {}) }}
+                onCanPlay={(event) => { void event.currentTarget.play().catch(() => {}) }}
                 onPause={(event) => {
-                  window.setTimeout(() => { void event.currentTarget.play() }, 0)
+                  const video = event.currentTarget
+                  window.setTimeout(() => { void video.play().catch(() => {}) }, 0)
                 }}
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
