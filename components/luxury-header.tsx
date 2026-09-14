@@ -63,7 +63,7 @@ export default function LuxuryHeader() {
           </Link>
 
           <Link href="/" className="group absolute left-1/2 -translate-x-1/2">
-            <Image src="/yassine-meubles-logo.png" alt="Yassine Meubles" width={1280} height={1024} className="h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+            <Image src="/yassine-meubles-wordmark.png" alt="Yassine Meubles" width={2048} height={1024} className="h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
           </Link>
 
           <div className="ml-auto flex items-center gap-5">

@@ -30,10 +30,10 @@ export default function HomepageLuxuryHeader() {
           <Link href="/" className="site-logo flex items-center flex-shrink-0 hover:opacity-80 transition-opacity">
             <span className="group inline-block cursor-pointer">
               <Image
-                src="/yassine-meubles-logo.png"
+                src="/yassine-meubles-wordmark.png"
                 alt="Yassine Meubles"
-                width={1254}
-                height={1254}
+                width={2048}
+                height={1024}
                 className="h-36 w-36 object-contain transition-transform duration-[450ms] ease-out group-hover:scale-[1.06]"
               />
             </span>
