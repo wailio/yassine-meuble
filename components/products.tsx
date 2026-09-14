@@ -226,35 +226,38 @@ const legacyProducts: LegacyProduct[] = [
 ]
 
 function ProductCard({ product, favorites, toggleFavorite, immediate = false }: { product: Product; favorites: number[]; toggleFavorite: (id: number) => void; immediate?: boolean }) {
+  const [isHovered, setIsHovered] = useState(false)
+  const alternateImage = product.images[1]
   const card = (
-    <Link href={`/product/${product.id}`}>
-      <div className="group flex h-[300px] flex-shrink-0 w-56 flex-col overflow-hidden rounded-none bg-[#1A1A1A] transition-colors duration-300 cursor-pointer md:h-auto md:w-[350px]">
-          <div className="relative aspect-[4/3] w-full items-center justify-center overflow-hidden bg-[#111111]">
-            {product.discount && <div className="absolute left-2 top-2 z-10 rounded bg-[rgba(15,15,15,0.85)] px-2.5 py-1 text-[10px] font-bold text-white">-{product.discount}%</div>}
-            <img src="/images/art-home-living-room.png" alt={product.name} className="h-full w-full object-cover transition-[filter] duration-300 group-hover:brightness-105" />
-            <button onClick={(e) => { e.preventDefault(); toggleFavorite(product.id) }} aria-label={`Ajouter ${product.name} aux favoris`} className="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-[rgba(0,0,0,0.4)] transition-colors hover:bg-[rgba(0,0,0,0.6)]">
-              <Heart className={`h-4 w-4 ${favorites.includes(product.id) ? "fill-white text-white" : "text-white"}`} />
-            </button>
-          </div>
-          <div className="flex flex-1 flex-col justify-between bg-[#1A1A1A] p-4 md:p-5">
-            <div>
-              <p className="mb-1 text-[9px] uppercase tracking-[0.12em] text-[#A8926A]">IdealInstitute</p>
-              <h3 className="line-clamp-2 text-sm font-bold text-[#F5F2EA] md:text-base">{product.name}</h3>
-              <p className="mt-2 hidden line-clamp-2 text-[11px] leading-4 text-[#9A9A9A] md:block md:text-xs">{product.description}</p>
-            </div>
-            <div className="mt-5 flex items-center gap-3">
-              <span className="text-sm font-bold text-[#F5F2EA] md:text-base">{product.price}</span>
-              {product.originalPrice && <span className="text-[10px] text-[#6B6B6B] line-through md:text-xs">{product.originalPrice}</span>}
-            </div>
+    <Link href={`/product/${product.id}`} className="group block w-56 flex-shrink-0 md:w-[350px]">
+      <article className="relative cursor-pointer bg-transparent">
+        <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#111111] md:aspect-[1/0.86]">
+          {product.discount && <span className="absolute left-4 top-4 z-10 text-[10px] font-medium uppercase tracking-[0.18em] text-[#b6a27a]">-{product.discount}%</span>}
+          <img
+            src={alternateImage && isHovered ? alternateImage : product.images[0]}
+            alt={product.name}
+            className="h-full w-full object-cover transition-all duration-700 ease-out group-hover:scale-[1.025]"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          />
+          {alternateImage && <span className="absolute bottom-4 left-1/2 hidden -translate-x-1/2 text-[9px] uppercase tracking-[0.24em] text-white/70 md:block">View second angle</span>}
+          <button onClick={(e) => { e.preventDefault(); toggleFavorite(product.id) }} aria-label={`Ajouter ${product.name} aux favoris`} className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center text-white/80 transition-colors hover:text-white">
+            <Heart className={`h-4 w-4 ${favorites.includes(product.id) ? "fill-white text-white" : "text-white"}`} />
+          </button>
+        </div>
+        <div className="flex items-baseline justify-between gap-6 px-1 pb-1 pt-5 md:min-h-[96px] md:items-start md:gap-8 md:pt-7">
+          <h3 className="max-w-[70%] text-[13px] font-medium leading-[1.35] tracking-[0.02em] text-[#f3f0e8] md:text-[18px] md:leading-[1.2]">{product.name}</h3>
+          <div className="shrink-0 text-right">
+            <span className="block whitespace-nowrap text-[12px] font-medium tracking-[0.04em] text-[#f3f0e8] md:text-[15px]">{product.price}</span>
+            {product.originalPrice && <span className="mt-1 block whitespace-nowrap text-[10px] tracking-[0.04em] text-white/35 line-through md:text-[11px]">{product.originalPrice}</span>}
           </div>
         </div>
-      </Link>
+      </article>
+    </Link>
   )
 
   return immediate ? (
-    <div key={product.id} className="animate-fade-in-up">
-      {card}
-    </div>
+    <div key={product.id} className="animate-fade-in-up">{card}</div>
   ) : (
     <Reveal key={product.id} delay={0}>{card}</Reveal>
   )
