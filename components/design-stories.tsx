@@ -106,20 +106,6 @@ export function DesignStories() {
                 playsInline
                 aria-label={item.alt}
                 preload="auto"
-                onLoadedData={(event) => {
-                  const video = event.currentTarget
-                  void video.play().catch(() => {})
-                }}
-                onCanPlay={(event) => {
-                  const video = event.currentTarget
-                  void video.play().catch(() => {})
-                }}
-                onPause={(event) => {
-                  const video = event.currentTarget
-                  window.setTimeout(() => {
-                    if (video.isConnected && video.paused) void video.play().catch(() => {})
-                  }, 0)
-                }}
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             ) : (
