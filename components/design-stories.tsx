@@ -16,11 +16,11 @@ const previewPhoto =
 
 const stories: StoryItem[] = [
   {
-    type: "instagram",
-    src: "https://www.instagram.com/p/DWcDIRpiPYM/embed/",
+    type: "video",
+    src: "/yassine-meubles-inspiration.mp4",
     href: "https://www.instagram.com/yassine.meubles/",
     platform: "instagram",
-    alt: "Elegant living room with custom curtains and seating",
+    alt: "Yassine Meubles inspiration video",
   },
   {
     type: "image",
@@ -101,6 +101,9 @@ export function DesignStories() {
                 loop
                 playsInline
                 aria-label={item.alt}
+                preload="auto"
+                onLoadedData={(event) => { void event.currentTarget.play() }}
+                onPause={(event) => { void event.currentTarget.play() }}
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             ) : (
