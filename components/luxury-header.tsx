@@ -58,12 +58,12 @@ export default function LuxuryHeader() {
             </span>
             <span className="flex flex-col font-[var(--font-manrope)] leading-tight">
               <span className="text-sm opacity-65">Need Help ?</span>
-              <span className="mt-1 text-base font-semibold">0540 61 18 14</span>
+              <span className="mt-1 text-base font-semibold">0558 64 60 54</span>
             </span>
           </Link>
 
           <Link href="/" className="group absolute left-1/2 -translate-x-1/2">
-            <Image src={isHomePage ? "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/whiteart-CSZR8FXConpLYf1EUnin48SZVbyaFQ.png" : "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/final-nobg-small-D3CvxrWoRG2wuLP6bom4faIF3Qii60.png"} alt="ArtHome" width={1280} height={1024} className="h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+            <Image src="/yassine-meubles-wordmark.png" alt="Yassine Meubles" width={2048} height={1024} className="h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
           </Link>
 
           <div className="ml-auto flex items-center gap-5">

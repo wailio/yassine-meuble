@@ -240,7 +240,6 @@ function ProductCard({ product, favorites, toggleFavorite, immediate = false }: 
             <div>
               <p className="mb-1 text-[9px] uppercase tracking-[0.12em] text-[#A8926A]">IdealInstitute</p>
               <h3 className="line-clamp-2 text-sm font-bold text-[#F5F2EA] md:text-base">{product.name}</h3>
-              <p className="mt-2 hidden line-clamp-2 text-[11px] leading-4 text-[#9A9A9A] md:block md:text-xs">{product.description}</p>
             </div>
             <div className="mt-5 flex items-center gap-3">
               <span className="text-sm font-bold text-[#F5F2EA] md:text-base">{product.price}</span>
@@ -334,7 +333,7 @@ export default function Products() {
               type="button"
               aria-label="Produits précédents"
               onClick={() => scrollNosProduits("left")}
-              className="absolute left-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:left-auto md:right-12 md:top-0 md:h-9 md:w-9 md:translate-y-0"
+              className="absolute left-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:left-[4%] md:right-auto md:top-1/2 md:h-10 md:w-10 md:-translate-y-1/2"
             >
               <ChevronLeft className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -342,7 +341,7 @@ export default function Products() {
               type="button"
               aria-label="Produits suivants"
               onClick={() => scrollNosProduits("right")}
-              className="absolute right-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:right-0 md:top-0 md:h-9 md:w-9 md:translate-y-0"
+              className="absolute right-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:right-[4%] md:top-1/2 md:h-10 md:w-10 md:-translate-y-1/2"
             >
               <ChevronRight className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -378,7 +377,7 @@ export default function Products() {
               type="button"
               aria-label="Modèles précédents"
               onClick={() => scrollModelesPrets("left")}
-              className="absolute left-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:left-auto md:right-12 md:top-0 md:h-9 md:w-9 md:translate-y-0"
+              className="absolute left-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:left-[4%] md:right-auto md:top-1/2 md:h-10 md:w-10 md:-translate-y-1/2"
             >
               <ChevronLeft className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -386,7 +385,7 @@ export default function Products() {
               type="button"
               aria-label="Modèles suivants"
               onClick={() => scrollModelesPrets("right")}
-              className="absolute right-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:right-0 md:top-0 md:h-9 md:w-9 md:translate-y-0"
+              className="absolute right-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:right-[4%] md:top-1/2 md:h-10 md:w-10 md:-translate-y-1/2"
             >
               <ChevronRight className="h-5 w-5" aria-hidden="true" />
             </button>

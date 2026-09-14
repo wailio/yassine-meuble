@@ -69,7 +69,7 @@ export default function Hero() {
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 pb-8 text-center md:px-6 md:pb-0">
           <div className="flex max-w-3xl flex-col items-center">
             <Reveal delay={0}>
-              <p className="font-sans text-[4px] font-semibold tracking-[1.5px] text-white [text-shadow:1px_0_0_#c9a24b,-1px_0_0_#c9a24b,0_1px_0_#c9a24b,0_-1px_0_#c9a24b] md:text-[13px] md:tracking-[5px]">ART HOME</p>
+              <p className="font-sans text-[4px] font-semibold tracking-[1.5px] text-white [text-shadow:1px_0_0_#c9a24b,-1px_0_0_#c9a24b,0_1px_0_#c9a24b,0_-1px_0_#c9a24b] md:text-[13px] md:tracking-[5px]">YASSINE MEUBLES</p>
             </Reveal>
             <Reveal delay={120}>
               <h1 className="mt-1 text-balance leading-none md:mt-[22px]">

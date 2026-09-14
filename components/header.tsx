@@ -38,10 +38,10 @@ export default function Header() {
         <Link href="/" className="site-logo flex items-center gap-2">
           <span className="group inline-block cursor-pointer">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mobile.logo-ZNiXs5uqaOiIwHZJYDR8m0oIyf8NzD.png"
-              alt="ArtHome"
-              width={2176}
-              height={736}
+              src="/yassine-meubles-mobile.png"
+              alt="Yassine Meubles"
+              width={2048}
+              height={1024}
               className="h-10 w-auto max-w-[185px] object-contain transition-transform duration-[450ms] ease-out group-hover:scale-[1.04]"
             />
           </span>

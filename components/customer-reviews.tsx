@@ -92,7 +92,7 @@ export default function CustomerReviews() {
             <div className="hidden w-full md:grid md:grid-cols-[0.9fr_1.1fr] md:items-center md:gap-12 lg:gap-20 " aria-label="Avis clients">
               <Reveal delay={80} className="relative flex h-[360px] items-end justify-center overflow-hidden">
                 <div className="absolute bottom-5 h-44 w-60 rounded-full bg-[#ebe5db]" aria-hidden="true" />
-                <img src="/chair.png" alt="Fauteuil et décoration Art Home" className="relative z-10 h-[360px] w-full object-contain object-bottom drop-shadow-[0_16px_14px_rgba(90,65,40,0.1)]" />
+                <img src="/chair.png" alt="Fauteuil et décoration Yassine Meubles" className="relative z-10 h-[360px] w-full object-contain object-bottom drop-shadow-[0_16px_14px_rgba(90,65,40,0.1)]" />
               </Reveal>
               <div className="max-w-[520px] pb-1">
                 <Reveal delay={140}>
