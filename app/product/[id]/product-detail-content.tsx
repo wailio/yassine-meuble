@@ -143,7 +143,7 @@ export default function ProductDetailContent({ productId }: { productId: string 
           {/* Product Images */}
           <div className="flex flex-col gap-3">
             <div className="relative flex aspect-square items-center justify-center overflow-visible md:overflow-hidden bg-white p-3 md:p-6 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
-              <ProductImageReveal key={selectedColorIndex} src="/images/art-home-living-room.png" alt={`${product.name} — ${selectedColor?.name ?? "Marron"}`} />
+              <ProductImageReveal key={selectedColorIndex} src="/images/product-im-v2.png" alt={`${product.name} — ${selectedColor?.name ?? "Marron"}`} />
               {galleryImages.length > 1 ? (
                 <>
                   <button
@@ -179,7 +179,7 @@ export default function ProductDetailContent({ productId }: { productId: string 
                         : 'border-2 border-gray-200 hover:border-[#8a6a32]'
                     }`}
                   >
-                    <img src="/images/art-home-living-room.png" alt={`Vue ${idx + 1} de ${product.name}`} className="size-full object-cover" />
+                    <img src="/images/product-im-v2.png" alt={`Vue ${idx + 1} de ${product.name}`} className="size-full object-cover" />
                   </button>
                 ))}
               </div>
@@ -222,7 +222,7 @@ export default function ProductDetailContent({ productId }: { productId: string 
                           onClick={() => { setSelectedColorIndex(index); setSelectedImageIndex(0) }}
                           className={`relative size-9 overflow-hidden rounded-full border-2 bg-white p-0.5 transition-transform ${selectedColorIndex === index ? "border-[#8a6a32] scale-110 shadow-[0_0_0_2px_rgba(138,106,50,0.22)]" : "border-gray-300 hover:border-[#8a6a32]"}`}
                         >
-                          <img src="/images/art-home-living-room.png" alt="" aria-hidden="true" className="size-full rounded-full object-cover" />
+                          <img src="/images/product-im-v2.png" alt="" aria-hidden="true" className="size-full rounded-full object-cover" />
                         </button>
                       ))}
                     </div>
@@ -271,7 +271,7 @@ export default function ProductDetailContent({ productId }: { productId: string 
                         : 'border-2 border-gray-200 hover:border-[#8a6a32]'
                     }`}
                   >
-                    <img src="/images/art-home-living-room.png" alt={`Vue ${idx + 1} de ${product.name}`} className="size-full object-cover" />
+                    <img src="/images/product-im-v2.png" alt={`Vue ${idx + 1} de ${product.name}`} className="size-full object-cover" />
                   </button>
                 ))}
               </div>
@@ -299,7 +299,7 @@ export default function ProductDetailContent({ productId }: { productId: string 
                     <div className="group flex-shrink-0 w-32 md:w-40 bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col">
                     <div className="relative aspect-square w-full bg-white overflow-hidden rounded-t-lg">
                       {relProduct.discount && <div className="absolute top-1.5 left-1.5 bg-red-600 text-white px-1.5 py-0.5 rounded text-[10px] font-bold z-10">-{relProduct.discount}%</div>}
-                      <img src="/images/art-home-living-room.png" alt={relProduct.name} className="h-full w-full scale-110 object-cover mix-blend-multiply transition-transform duration-300 group-hover:scale-[1.16]" />
+                      <img src="/images/product-im-v2.png" alt={relProduct.name} className="h-full w-full scale-110 object-cover mix-blend-multiply transition-transform duration-300 group-hover:scale-[1.16]" />
                       <button onClick={(e) => { e.preventDefault(); toggleFavorite(relProduct.id) }} className="absolute top-1.5 right-1.5 bg-white rounded-full p-1.5 hover:bg-gray-100 transition-colors">
                         <Heart className={`w-3 h-3 ${favorites.includes(relProduct.id) ? "fill-red-600 text-red-600" : "text-gray-600"}`} />
                       </button>

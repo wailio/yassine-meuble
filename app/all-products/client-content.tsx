@@ -212,7 +212,7 @@ export default function AllProductsClientContent() {
                 {/* Image */}
                 <div className="relative aspect-square w-full bg-white overflow-hidden rounded-t-xl">
                   <img
-                    src="/images/art-home-living-room.png"
+                    src="/images/product-im-v2.png"
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />

@@ -25,7 +25,7 @@ const sofas: Product[] = [
     name: "Minimalist Sofa",
     price: "12,990 DZD",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Interior%20Design%20Clipart-WqD6WHlfVzagkg1eQI33kEAmpGAEbx.jpg",
+      "/images/product-im-v2.png",
     description: "Sleek and sophisticated sofa perfect for contemporary living spaces",
     details: "Premium construction with premium upholstery and solid wood frame",
     materials: "Fabric upholstery, solid oak wood frame",
@@ -36,7 +36,7 @@ const sofas: Product[] = [
     name: "Modern Sectional",
     price: "18,990 DZD",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Interior%20Design%20Clipart-WqD6WHlfVzagkg1eQI33kEAmpGAEbx.jpg",
+      "/images/product-im-v2.png",
     description: "Spacious L-shaped sectional for comfort and style",
     details: "Large capacity with modular design and premium cushioning",
     materials: "High-quality fabric, solid wood frame with metal legs",
@@ -47,7 +47,7 @@ const sofas: Product[] = [
     name: "Contemporary Loveseat",
     price: "8,990 DZD",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Interior%20Design%20Clipart-WqD6WHlfVzagkg1eQI33kEAmpGAEbx.jpg",
+      "/images/product-im-v2.png",
     description: "Perfect two-seater for cozy spaces and apartments",
     details: "Compact design with maximum comfort and elegant aesthetics",
     materials: "Premium fabric upholstery, solid wood frame",
@@ -58,7 +58,7 @@ const sofas: Product[] = [
     name: "Luxury Sofa Bed",
     price: "15,990 DZD",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Interior%20Design%20Clipart-WqD6WHlfVzagkg1eQI33kEAmpGAEbx.jpg",
+      "/images/product-im-v2.png",
     description: "Convertible sofa bed with premium comfort features",
     details: "Dual functionality with smooth transformation mechanism",
     materials: "Premium fabric, solid wood frame with quality mattress",
@@ -124,7 +124,7 @@ export default function SofaProductPage({ params }: { params: { id: string } }) 
             <div className="flex items-center justify-center">
               <div className="w-full max-h-[600px] flex items-center justify-center bg-white overflow-hidden">
                 <img
-                  src="/images/art-home-living-room.png"
+                  src="/images/product-im-v2.png"
                   alt={product.name}
                   className="w-full h-full object-contain"
                 />

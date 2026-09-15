@@ -25,7 +25,7 @@ const sleepingRooms: Product[] = [
     name: "Platform Bed",
     price: "15,990 DZD",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Interior%20Design%20Clipart-WqD6WHlfVzagkg1eQI33kEAmpGAEbx.jpg",
+      "/images/product-im-v2.png",
     description: "Contemporary platform bed with clean lines and durability",
     details: "Low-profile design with built-in storage and premium construction",
     materials: "Solid wood frame with quality slats",
@@ -36,7 +36,7 @@ const sleepingRooms: Product[] = [
     name: "Luxury Storage Bed",
     price: "18,990 DZD",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Interior%20Design%20Clipart-WqD6WHlfVzagkg1eQI33kEAmpGAEbx.jpg",
+      "/images/product-im-v2.png",
     description: "Queen-size bed with built-in drawer storage and premium mattress",
     details: "Functional storage with easy-access drawers and premium mattress",
     materials: "Solid wood frame with upholstered drawer fronts",
@@ -47,7 +47,7 @@ const sleepingRooms: Product[] = [
     name: "Minimalist Bed Frame",
     price: "12,990 DZD",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Interior%20Design%20Clipart-WqD6WHlfVzagkg1eQI33kEAmpGAEbx.jpg",
+      "/images/product-im-v2.png",
     description: "Sleek low-profile bed frame with solid wood construction",
     details: "Minimalist aesthetic with premium solid wood construction",
     materials: "Solid walnut wood with natural finish",
@@ -58,7 +58,7 @@ const sleepingRooms: Product[] = [
     name: "Premium Bedroom Set",
     price: "34,990 DZD",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Interior%20Design%20Clipart-WqD6WHlfVzagkg1eQI33kEAmpGAEbx.jpg",
+      "/images/product-im-v2.png",
     description: "Complete bedroom ensemble with bed, nightstands, and dresser",
     details: "Complete bedroom solution with matching furniture and premium quality",
     materials: "Solid wood construction throughout, quality hardware",
@@ -124,7 +124,7 @@ export default function SleepingRoomProductPage({ params }: { params: { id: stri
             <div className="flex items-center justify-center">
               <div className="w-full max-h-[600px] flex items-center justify-center bg-white overflow-hidden">
                 <img
-                  src="/images/art-home-living-room.png"
+                  src="/images/product-im-v2.png"
                   alt={product.name}
                   className="w-full h-full object-contain"
                 />

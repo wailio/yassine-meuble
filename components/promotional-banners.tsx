@@ -15,7 +15,7 @@ export default function PromotionalBanners() {
           {/* Background Image */}
           <div className="absolute inset-0 opacity-30">
             <img
-              src="/images/art-home-living-room.png"
+              src="/images/product-im-v2.png"
               alt="Perfect Armchair"
               className="w-full h-full object-cover"
             />
@@ -47,7 +47,7 @@ export default function PromotionalBanners() {
           {/* Background Image */}
           <div className="absolute inset-0 opacity-40">
             <img
-              src="/images/art-home-living-room.png"
+              src="/images/product-im-v2.png"
               alt="Table Sets with Chairs"
               className="w-full h-full object-cover"
             />

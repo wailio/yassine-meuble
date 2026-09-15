@@ -13,7 +13,7 @@ export default function Showcase() {
       itemCount: "1500+",
       description: "Tables élégantes et chaises modernes",
       subcategories: ["Table Moderne", "Chaises Ergonomiques", "Ensemble Complet"],
-      image: "/images/art-home-living-room.png",
+      image: "/images/product-im-v2.png",
       link: "/all-products?category=chairs"
     },
     {
@@ -22,7 +22,7 @@ export default function Showcase() {
       itemCount: "750+",
       description: "Collection de sofas premium et confortables",
       subcategories: ["Canapé Blanc", "Canapé Design", "Ensemble Canapés"],
-      image: "/images/art-home-living-room.png",
+      image: "/images/product-im-v2.png",
       link: "/all-products?category=sofas"
     },
     {
@@ -31,7 +31,7 @@ export default function Showcase() {
       itemCount: "600+",
       description: "Meubles de chambre modernes et élégants",
       subcategories: ["Lits Plateforme", "Armoires Design", "Ensembles Complets"],
-      image: "/images/art-home-living-room.png",
+      image: "/images/product-im-v2.png",
       link: "/all-products?category=bedroom"
     }
   ]

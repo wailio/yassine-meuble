@@ -153,7 +153,7 @@ export default function ShowcaseHero() {
           {/* Left Image */}
           <div className="showcase-item flex-shrink-0 w-1/4 flex flex-col justify-between relative overflow-hidden group h-[500px] cursor-pointer transition-all duration-500 select-none">
             <img
-              src="/images/art-home-living-room.png"
+              src="/images/product-im-v2.png"
               alt="Modern Living Room"
               className="absolute inset-0 w-full h-full object-cover showcase-image-left group-hover:scale-110 transition-transform duration-700 pointer-events-none"
               draggable="false"
@@ -184,7 +184,7 @@ export default function ShowcaseHero() {
             <div className="relative h-full flex items-center justify-center overflow-hidden bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 min-h-[500px]">
               <div className="absolute inset-0 opacity-30">
                 <img
-                  src="/images/art-home-living-room.png"
+                  src="/images/product-im-v2.png"
                   alt="Canapés"
                   className="w-full h-full object-cover"
                 />
@@ -211,7 +211,7 @@ export default function ShowcaseHero() {
             <div className="relative h-full flex items-center justify-center overflow-hidden bg-gradient-to-b from-amber-900 via-yellow-900 to-amber-900 min-h-[500px]">
               <div className="absolute inset-0 opacity-40">
                 <img
-                  src="/images/art-home-living-room.png"
+                  src="/images/product-im-v2.png"
                   alt="Table Sets"
                   className="w-full h-full object-cover"
                 />
@@ -238,7 +238,7 @@ export default function ShowcaseHero() {
           {/* Right Image */}
           <div className="showcase-item flex-shrink-0 w-1/4 flex flex-col justify-between relative overflow-hidden group h-[500px] cursor-pointer transition-all duration-500 select-none">
             <img
-              src="/images/art-home-living-room.png"
+              src="/images/product-im-v2.png"
               alt="Contemporary Design"
               className="absolute inset-0 w-full h-full object-cover showcase-image-right group-hover:scale-110 transition-transform duration-700 pointer-events-none"
               draggable="false"
@@ -273,7 +273,7 @@ export default function ShowcaseHero() {
         {/* Left section */}
         <div className="showcase-item relative h-64 overflow-hidden flex flex-col justify-between cursor-pointer">
           <img
-            src="/images/art-home-living-room.png"
+            src="/images/product-im-v2.png"
             alt="Modern Living Room"
             className="absolute inset-0 w-full h-full object-cover showcase-image-left"
           />
@@ -299,7 +299,7 @@ export default function ShowcaseHero() {
           <div className="relative h-64 flex items-center justify-center overflow-hidden bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
             <div className="absolute inset-0 opacity-30">
               <img
-                src="/images/art-home-living-room.png"
+                src="/images/product-im-v2.png"
                 alt="Canapés"
                 className="w-full h-full object-cover"
               />
@@ -326,7 +326,7 @@ export default function ShowcaseHero() {
           <div className="relative h-64 flex items-center justify-center overflow-hidden bg-gradient-to-b from-amber-900 via-yellow-900 to-amber-900">
             <div className="absolute inset-0 opacity-40">
               <img
-                src="/images/art-home-living-room.png"
+                src="/images/product-im-v2.png"
                 alt="Table Sets"
                 className="w-full h-full object-cover"
               />
@@ -353,7 +353,7 @@ export default function ShowcaseHero() {
         {/* Right section */}
         <div className="showcase-item relative h-64 overflow-hidden flex flex-col justify-between cursor-pointer">
           <img
-            src="/images/art-home-living-room.png"
+            src="/images/product-im-v2.png"
             alt="Contemporary Design"
             className="absolute inset-0 w-full h-full object-cover showcase-image-right"
           />
