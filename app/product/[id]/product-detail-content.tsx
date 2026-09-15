@@ -222,7 +222,7 @@ export default function ProductDetailContent({ productId }: { productId: string 
                           onClick={() => { setSelectedColorIndex(index); setSelectedImageIndex(0) }}
                           className={`relative size-9 overflow-hidden rounded-full border-2 bg-white p-0.5 transition-transform ${selectedColorIndex === index ? "border-[#8a6a32] scale-110 shadow-[0_0_0_2px_rgba(138,106,50,0.22)]" : "border-gray-300 hover:border-[#8a6a32]"}`}
                         >
-                          <img src="/images/product-im-v2.png" alt="" aria-hidden="true" className="size-full rounded-full object-cover" />
+                          <img src="/images/color-swatch-charcoal.png" alt="" aria-hidden="true" className="size-full rounded-full object-cover" />
                         </button>
                       ))}
                     </div>

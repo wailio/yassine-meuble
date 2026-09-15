@@ -798,12 +798,40 @@ export const allProducts: Product[] = [
     dimension: "Composition 2 tables",
     category: "accessories",
   },
+  {
+    id: 44,
+    name: "Chambre à coucher NÉBULEUSE",
+    price: "94,990 DZD",
+    originalPrice: "114,990 DZD",
+    images: image("/images/product-im-v2.png"),
+    description: "Ensemble chambre moderne avec lit double, chevets et rangements coordonnés.",
+    dimension: "Armoire 2m40",
+    discount: 17,
+    category: "chambres",
+    colors: [{ name: "Charbon", swatch: "/images/color-swatch-charcoal.png", images: ["/images/product-im-v2.png"] }],
+  },
+  {
+    id: 45,
+    name: "Chambre à coucher VELours",
+    price: "102,990 DZD",
+    originalPrice: "124,990 DZD",
+    images: image("/images/product-im-v2.png"),
+    description: "Collection chambre élégante avec tête de lit capitonnée et mobilier assorti.",
+    dimension: "Armoire 2m70",
+    discount: 18,
+    category: "chambres",
+    colors: [{ name: "Charbon", swatch: "/images/color-swatch-charcoal.png", images: ["/images/product-im-v2.png"] }],
+  },
 ].filter((product) => ![
   1, 3, 4, 5, 6, 7, 8, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25,
   26, 27, 28, 29, 30, 31,
 ].includes(product.id)).map((product) => ({
   ...product,
   images: ["/images/product-im-v2.png"],
+  colors: product.colors?.map((color) => ({
+    ...color,
+    swatch: "/images/color-swatch-charcoal.png",
+  })),
 })) as Product[]
 
 export function getProduct(productId: string | number) {
