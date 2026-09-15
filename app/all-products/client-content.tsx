@@ -175,7 +175,7 @@ export default function AllProductsClientContent() {
       {/* Category Filters */}
       <Reveal delay={200}>
       <div className="mb-10 md:mb-14">
-        <div className="relative left-1/2 w-screen -translate-x-1/2 flex flex-wrap gap-2 md:gap-3 p-4 md:p-6 bg-white rounded-none border-y border-x-0 border-gray-200 shadow-sm justify-center">
+        <div className="flex flex-wrap gap-2 md:gap-3 p-4 md:p-6 bg-white rounded-xl md:rounded-none border border-gray-200 md:border-y md:border-x-0 shadow-sm justify-center md:relative md:left-1/2 md:w-screen md:-translate-x-1/2">
           {categories.map((category) => (
             <button
               key={category.id}
