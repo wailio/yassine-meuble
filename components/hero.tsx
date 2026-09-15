@@ -115,19 +115,41 @@ export default function Hero() {
       </div>
 
       {/* Delivery Banner */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-[#1E1912] via-[#1E1912] to-[#8b7344] text-white py-4 md:py-6 px-4 md:px-6 before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/5 before:to-transparent before:opacity-70">
-        <Reveal delay={480} className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          <div className="delivery-benefit flex items-center justify-center gap-3">
-            <Check className="delivery-benefit-icon w-5 h-5 md:w-6 md:h-6 flex-shrink-0 text-[#7E8EA6]" />
-            <span className="text-xs md:text-base font-medium text-white">Livraison + montage dans les 58 wilayas</span>
+      <div className="relative overflow-hidden bg-gradient-to-r from-[#1E1912] via-[#2c2418] to-[#8b7344] text-white md:px-6 md:py-6 before:pointer-events-none before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.12),transparent_55%)] before:opacity-60">
+        <div className="relative hidden md:block">
+          <Reveal delay={480} className="mx-auto max-w-6xl">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+              <div className="delivery-benefit flex items-center justify-center gap-3">
+                <Check className="delivery-benefit-icon h-5 w-5 flex-shrink-0 text-[#7E8EA6] md:h-6 md:w-6" />
+                <span className="text-xs font-medium text-white md:text-base">Livraison + montage dans les 58 wilayas</span>
+              </div>
+              <div className="delivery-benefit flex items-center justify-center gap-3 [animation-delay:1.1s]">
+                <Truck className="delivery-benefit-icon h-5 w-5 flex-shrink-0 text-[#7E8EA6] md:h-6 md:w-6" />
+                <span className="text-xs font-medium text-white md:text-base">Gratuit sur Alger ...</span>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+        <div className="relative space-y-px overflow-hidden md:hidden">
+          <div className="border-b border-white/10 bg-black/10 py-3">
+            <div className="delivery-marquee delivery-marquee-right flex w-max items-center gap-8 whitespace-nowrap">
+              {Array.from({ length: 4 }).map((_, index) => (
+                <span key={index} className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#f8f3e8]">
+                  <Check className="h-4 w-4 text-[#d1aa5c]" /> Livraison + montage dans les 58 wilayas <span className="text-[#d1aa5c]">✦</span>
+                </span>
+              ))}
+            </div>
           </div>
-          <div className="delivery-benefit flex items-center justify-center gap-3 [animation-delay:1.1s]">
-            <Truck className="delivery-benefit-icon w-5 h-5 md:w-6 md:h-6 flex-shrink-0 text-[#7E8EA6]" />
-            <span className="text-xs md:text-base font-medium text-white">Gratuit sur Alger ...</span>
+          <div className="bg-[#17130e]/35 py-3">
+            <div className="delivery-marquee delivery-marquee-left flex w-max items-center gap-8 whitespace-nowrap">
+              {Array.from({ length: 4 }).map((_, index) => (
+                <span key={index} className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#f8f3e8]">
+                  <Truck className="h-4 w-4 text-[#d1aa5c]" /> Gratuit sur Alger, Blida, Boumerdès, Médéa &amp; Tipaza <span className="text-[#d1aa5c]">◆</span>
+                </span>
+              ))}
+            </div>
           </div>
-          </div>
-        </Reveal>
+        </div>
       </div>
       <style>{`
         .hero-underline path {
@@ -138,8 +160,19 @@ export default function Hero() {
         @keyframes heroUnderlineDraw {
           to { stroke-dashoffset: 0; }
         }
+        .delivery-marquee-right { animation: deliveryMarqueeRight 26s linear infinite; }
+        .delivery-marquee-left { animation: deliveryMarqueeLeft 30s linear infinite; }
+        @keyframes deliveryMarqueeRight {
+          from { transform: translateX(-25%); }
+          to { transform: translateX(0); }
+        }
+        @keyframes deliveryMarqueeLeft {
+          from { transform: translateX(0); }
+          to { transform: translateX(-25%); }
+        }
         @media (prefers-reduced-motion: reduce) {
           .hero-underline path { stroke-dashoffset: 0; animation: none; }
+          .delivery-marquee-right, .delivery-marquee-left { animation: none; }
         }
       `}</style>
     </section>
