@@ -6,6 +6,7 @@ import { useEffect } from "react"
 import { usePathname } from "next/navigation"
 import { Analytics } from "@vercel/analytics/next"
 import { LanguageProvider } from "@/components/language-provider"
+import { LivoraCursor } from "@/components/livora-cursor"
 
 function ScrollToTop() {
   const pathname = usePathname()
@@ -25,6 +26,7 @@ export default function ClientLayout({
   return (
     <LanguageProvider>
       <ScrollToTop />
+      <LivoraCursor />
       {children}
       <Analytics />
     </LanguageProvider>

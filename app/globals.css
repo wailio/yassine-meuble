@@ -45,7 +45,60 @@ body[data-locale="ar"] button {
   animation: gentle-sway 5s ease-in-out infinite, soft-glow 4.5s ease-in-out infinite;
 }
 
+.livora-cursor-dot,
+.livora-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform;
+  transition: opacity 500ms ease, width 700ms cubic-bezier(0.22, 1, 0.36, 1), height 700ms cubic-bezier(0.22, 1, 0.36, 1), border-color 700ms ease;
+}
+
+@media (min-width: 768px) {
+  .livora-cursor-dot,
+  .livora-cursor-ring {
+    opacity: 1 !important;
+  }
+}
+
+.livora-cursor-dot {
+  width: 5px;
+  height: 5px;
+  margin: -2.5px 0 0 -2.5px;
+  border-radius: 999px;
+  background: #d8bb79;
+}
+
+.livora-cursor-ring {
+  width: 34px;
+  height: 34px;
+  margin: -17px 0 0 -17px;
+  border: 2px solid rgba(216, 187, 121, 0.78);
+  border-radius: 999px;
+}
+
+@media (min-width: 768px) {
+  .livora-cursor-dot,
+  .livora-cursor-ring {
+    opacity: 1;
+  }
+
+  .livora-cursor-ring:hover,
+  body:has(a:hover, button:hover) .livora-cursor-ring {
+    width: 54px;
+    height: 54px;
+    margin: -27px 0 0 -27px;
+    border-color: rgba(216, 187, 121, 0.9);
+    background: rgba(216, 187, 121, 0.04);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .livora-cursor-dot,
+  .livora-cursor-ring,
   .mission-logo-float,
   .mission-logo-sway,
   .reveal-luxury {
