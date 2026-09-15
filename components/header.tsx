@@ -42,7 +42,7 @@ export default function Header() {
               alt="Yassine Meubles"
               width={2048}
               height={1024}
-              className="h-8 w-auto max-w-[175px] object-contain transition-transform duration-[450ms] ease-out group-hover:scale-[1.04]"
+              className="h-7 w-auto max-w-[155px] object-contain transition-transform duration-[450ms] ease-out group-hover:scale-[1.04]"
             />
           </span>
         </Link>
