@@ -115,8 +115,8 @@ export default function Hero() {
       </div>
 
       {/* Delivery Banner */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-[#1E1912] via-[#2c2418] to-[#8b7344] text-white md:px-6 md:py-6 before:pointer-events-none before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.12),transparent_55%)] before:opacity-60">
-        <div className="relative hidden overflow-hidden py-4 md:block">
+      <div className="relative overflow-hidden bg-gradient-to-r from-[#1E1912] via-[#2c2418] to-[#8b7344] text-white md:px-6 before:pointer-events-none before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.12),transparent_55%)] before:opacity-60">
+        <div className="relative hidden overflow-hidden py-2 md:block">
           <div className="delivery-marquee delivery-marquee-right flex w-max items-center gap-10 whitespace-nowrap">
             {Array.from({ length: 5 }).map((_, index) => (
               <span key={index} className="flex items-center gap-4 text-sm font-semibold uppercase tracking-[0.16em] text-[#f8f3e8] md:text-base">
