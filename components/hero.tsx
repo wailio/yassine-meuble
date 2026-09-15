@@ -19,9 +19,9 @@ export default function Hero() {
     "/images/home-hero-bedroom-3.png",
   ]
   const mobileHeroImages = [
-    "/images/home-hero-salon-1.png",
-    "/images/home-hero-salon-2.png",
-    "/images/home-hero-salon-3.png",
+    "/images/mobile-hero-bedroom-1.png",
+    "/images/mobile-hero-bedroom-2.png",
+    "/images/mobile-hero-bedroom-3.png",
   ]
 
   useEffect(() => {
@@ -99,7 +99,7 @@ export default function Hero() {
 
         {/* Image carousel indicators */}
         <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
-          {heroImages.map((_, index) => (
+          {(typeof window !== "undefined" && window.innerWidth < 768 ? mobileHeroImages : heroImages).map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentImageIndex(index)}
