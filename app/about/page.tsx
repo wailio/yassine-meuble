@@ -131,8 +131,8 @@ export default function AboutPage() {
             <Reveal delay={450} variant="scale" className="hidden items-center justify-center md:flex">
               <div className="mission-logo-float">
                 <img
-                  src="/images/art-favicon.png"
-                  alt="Logo Yassine Meubles bleu et doré"
+                  src="/images/mission-logo-gold.png"
+                  alt="Logo monogramme doré Yassine Meubles"
                   className="mission-logo-sway h-auto w-full max-w-[220px] object-contain"
                 />
               </div>
