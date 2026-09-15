@@ -228,7 +228,7 @@ const legacyProducts: LegacyProduct[] = [
 function ProductCard({ product, favorites, toggleFavorite, immediate = false }: { product: Product; favorites: number[]; toggleFavorite: (id: number) => void; immediate?: boolean }) {
   const card = (
     <Link href={`/product/${product.id}`}>
-      <div className="group flex h-[300px] flex-shrink-0 w-56 flex-col overflow-hidden rounded-none bg-[#1A1A1A] transition-colors duration-300 cursor-pointer md:h-auto md:w-[350px]">
+      <div className="group flex h-auto flex-shrink-0 w-56 flex-col overflow-hidden rounded-none bg-[#1A1A1A] transition-colors duration-300 cursor-pointer md:h-auto md:w-[350px]">
           <div className="relative aspect-[4/3] w-full items-center justify-center overflow-hidden bg-[#111111]">
             {product.discount && <div className="absolute left-2 top-2 z-10 rounded bg-[rgba(15,15,15,0.85)] px-2.5 py-1 text-[10px] font-bold text-white">-{product.discount}%</div>}
             <img src="/images/product-im-v2.png" alt={product.name} className="h-full w-full object-cover transition-[filter] duration-300 group-hover:brightness-105" />
@@ -236,12 +236,12 @@ function ProductCard({ product, favorites, toggleFavorite, immediate = false }: 
               <Heart className={`h-4 w-4 ${favorites.includes(product.id) ? "fill-white text-white" : "text-white"}`} />
             </button>
           </div>
-          <div className="flex flex-1 flex-col justify-start bg-[#1A1A1A] p-4 md:p-5">
+          <div className="flex flex-1 flex-col justify-start bg-[#1A1A1A] p-3 md:p-5">
             <div>
               <p className="mb-1 text-[9px] uppercase tracking-[0.12em] text-[#A8926A]">IdealInstitute</p>
               <h3 className="line-clamp-2 text-sm font-bold text-[#F5F2EA] md:text-base">{product.name}</h3>
             </div>
-            <div className="mt-2 flex items-center gap-3 md:mt-5">
+            <div className="mt-1 flex items-center gap-3 md:mt-5">
               <span className="text-sm font-bold text-[#F5F2EA] md:text-base">{product.price}</span>
               {product.originalPrice && <span className="text-[10px] text-[#6B6B6B] line-through md:text-xs">{product.originalPrice}</span>}
             </div>
