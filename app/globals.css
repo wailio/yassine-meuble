@@ -57,6 +57,13 @@ body[data-locale="ar"] button {
   transition: opacity 500ms ease, width 700ms cubic-bezier(0.22, 1, 0.36, 1), height 700ms cubic-bezier(0.22, 1, 0.36, 1), border-color 700ms ease;
 }
 
+@media (min-width: 768px) {
+  .livora-cursor-dot,
+  .livora-cursor-ring {
+    opacity: 1 !important;
+  }
+}
+
 .livora-cursor-dot {
   width: 5px;
   height: 5px;
@@ -69,16 +76,17 @@ body[data-locale="ar"] button {
   width: 34px;
   height: 34px;
   margin: -17px 0 0 -17px;
-  border: 1px solid rgba(216, 187, 121, 0.58);
+  border: 2px solid rgba(216, 187, 121, 0.78);
   border-radius: 999px;
 }
 
-@media (pointer: fine) and (min-width: 768px) {
-  body:has(.livora-cursor-dot) .livora-cursor-dot,
-  body:has(.livora-cursor-ring) .livora-cursor-ring {
+@media (min-width: 768px) {
+  .livora-cursor-dot,
+  .livora-cursor-ring {
     opacity: 1;
   }
 
+  .livora-cursor-ring:hover,
   body:has(a:hover, button:hover) .livora-cursor-ring {
     width: 54px;
     height: 54px;

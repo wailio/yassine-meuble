@@ -7,9 +7,8 @@ export function LivoraCursor() {
   const ringRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const finePointer = window.matchMedia("(pointer: fine)")
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
-    if (!finePointer.matches || reducedMotion.matches) return
+    if (window.innerWidth < 768 || reducedMotion.matches) return
 
     let targetX = window.innerWidth / 2
     let targetY = window.innerHeight / 2
@@ -33,10 +32,12 @@ export function LivoraCursor() {
     }
 
     window.addEventListener("pointermove", handleMove, { passive: true })
+    window.addEventListener("mousemove", handleMove, { passive: true })
     frame = requestAnimationFrame(animate)
 
     return () => {
       window.removeEventListener("pointermove", handleMove)
+      window.removeEventListener("mousemove", handleMove)
       cancelAnimationFrame(frame)
     }
   }, [])
