@@ -19,7 +19,7 @@ export interface Product {
   colors?: ProductColorVariant[]
 }
 
-const image = (_url: string) => ["/images/art-home-living-room.png"]
+const image = (_url: string) => ["/images/product-im.png"]
 
 export const allProducts: Product[] = [
   {
