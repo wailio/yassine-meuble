@@ -229,7 +229,7 @@ function ProductCard({ product, favorites, toggleFavorite, immediate = false }: 
   const card = (
     <Link href={`/product/${product.id}`}>
       <div className="group flex h-[260px] flex-shrink-0 w-56 flex-col overflow-hidden rounded-none bg-[#1A1A1A] transition-colors duration-300 cursor-pointer md:h-auto md:w-[350px]">
-          <div className="relative aspect-[4/3] w-full items-center justify-center overflow-hidden bg-[#111111]">
+          <div className="relative h-[150px] w-full items-center justify-center overflow-hidden bg-[#111111] md:aspect-[4/3] md:h-auto">
             {product.discount && <div className="absolute left-2 top-2 z-10 rounded bg-[rgba(15,15,15,0.85)] px-2.5 py-1 text-[10px] font-bold text-white">-{product.discount}%</div>}
             <img src="/images/product-im-v2.png" alt={product.name} className="h-full w-full object-cover transition-[filter] duration-300 group-hover:brightness-105" />
             <button onClick={(e) => { e.preventDefault(); toggleFavorite(product.id) }} aria-label={`Ajouter ${product.name} aux favoris`} className="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-[rgba(0,0,0,0.4)] transition-colors hover:bg-[rgba(0,0,0,0.6)]">
