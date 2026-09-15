@@ -143,7 +143,7 @@ export default function ProductDetailContent({ productId }: { productId: string 
           {/* Product Images */}
           <div className="flex flex-col gap-3">
             <div className="relative flex aspect-square items-center justify-center overflow-visible md:overflow-hidden bg-white p-3 md:p-6 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
-              <ProductImageReveal key={selectedColorIndex} src="/images/product-im-v2.png" alt={`${product.name} — ${selectedColor?.name ?? "Marron"}`} />
+              <ProductImageReveal key={selectedColorIndex} src="/images/product-im-v2.png" alt={`${product.name} — ${selectedColor?.name ?? "Gris anthracite"}`} />
               {galleryImages.length > 1 ? (
                 <>
                   <button
@@ -246,7 +246,7 @@ export default function ProductDetailContent({ productId }: { productId: string 
                 <input type="number" value={quantity} onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))} className="w-10 text-center border-l border-r border-gray-300 py-1.5 text-sm text-black" min="1" />
                 <button onClick={() => setQuantity(quantity + 1)} className="px-2 md:px-3 py-1.5 text-gray-600 hover:bg-gray-100 text-sm">+</button>
               </div>
-              <Link href={`/contact?subject=Commande&message=${encodeURIComponent(`Je souhaite commander ce produit: ${product.name} (${selectedColor?.name ?? "Marron"})`)}#form`}>
+              <Link href={`/contact?subject=Commande&message=${encodeURIComponent(`Je souhaite commander ce produit: ${product.name} (${selectedColor?.name ?? "Gris anthracite"})`)}#form`}>
                 <button className="flex-1 md:flex-auto px-6 md:px-8 py-2 md:py-2.5 bg-[#1E1912] hover:bg-[#00030A] text-white font-semibold rounded-lg transition-colors text-sm md:text-base">Commandez maintenant</button>
               </Link>
             </div>
