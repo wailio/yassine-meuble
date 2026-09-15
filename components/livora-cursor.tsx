@@ -16,7 +16,7 @@ export function LivoraCursor() {
     let currentY = targetY
     let frame = 0
 
-    const handleMove = (event: PointerEvent) => {
+    const handleMove = (event: MouseEvent | PointerEvent) => {
       targetX = event.clientX
       targetY = event.clientY
       document.documentElement.style.setProperty("--livora-pointer-x", `${targetX}px`)
