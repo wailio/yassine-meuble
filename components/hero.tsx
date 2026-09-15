@@ -116,19 +116,17 @@ export default function Hero() {
 
       {/* Delivery Banner */}
       <div className="relative overflow-hidden bg-gradient-to-r from-[#1E1912] via-[#2c2418] to-[#8b7344] text-white md:px-6 md:py-6 before:pointer-events-none before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.12),transparent_55%)] before:opacity-60">
-        <div className="relative hidden md:block">
-          <Reveal delay={480} className="mx-auto max-w-6xl">
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
-              <div className="delivery-benefit flex items-center justify-center gap-3">
-                <Check className="delivery-benefit-icon h-5 w-5 flex-shrink-0 text-[#7E8EA6] md:h-6 md:w-6" />
-                <span className="text-xs font-medium text-white md:text-base">Livraison + montage dans les 58 wilayas</span>
-              </div>
-              <div className="delivery-benefit flex items-center justify-center gap-3 [animation-delay:1.1s]">
-                <Truck className="delivery-benefit-icon h-5 w-5 flex-shrink-0 text-[#7E8EA6] md:h-6 md:w-6" />
-                <span className="text-xs font-medium text-white md:text-base">Gratuit sur Alger ...</span>
-              </div>
-            </div>
-          </Reveal>
+        <div className="relative hidden overflow-hidden py-4 md:block">
+          <div className="delivery-marquee delivery-marquee-right flex w-max items-center gap-10 whitespace-nowrap">
+            {Array.from({ length: 5 }).map((_, index) => (
+              <span key={index} className="flex items-center gap-4 text-sm font-semibold uppercase tracking-[0.16em] text-[#f8f3e8] md:text-base">
+                <Check className="h-5 w-5 text-[#d1aa5c]" /> Livraison + montage dans les 58 wilayas
+                <span className="text-[#d1aa5c]">✦</span>
+                <Truck className="h-5 w-5 text-[#d1aa5c]" /> Gratuit sur Alger, Blida, Boumerdès, Médéa &amp; Tipaza
+                <span className="text-[#d1aa5c]">◆</span>
+              </span>
+            ))}
+          </div>
         </div>
         <div className="relative space-y-px overflow-hidden md:hidden">
           <div className="border-b border-white/10 bg-black/10 py-3">
