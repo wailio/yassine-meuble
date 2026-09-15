@@ -236,12 +236,12 @@ function ProductCard({ product, favorites, toggleFavorite, immediate = false }: 
               <Heart className={`h-4 w-4 ${favorites.includes(product.id) ? "fill-white text-white" : "text-white"}`} />
             </button>
           </div>
-          <div className="flex flex-1 flex-col justify-between bg-[#1A1A1A] p-4 md:p-5">
+          <div className="flex flex-1 flex-col justify-start bg-[#1A1A1A] p-4 md:p-5">
             <div>
               <p className="mb-1 text-[9px] uppercase tracking-[0.12em] text-[#A8926A]">IdealInstitute</p>
               <h3 className="line-clamp-2 text-sm font-bold text-[#F5F2EA] md:text-base">{product.name}</h3>
             </div>
-            <div className="mt-5 flex items-center gap-3">
+            <div className="mt-2 flex items-center gap-3 md:mt-5">
               <span className="text-sm font-bold text-[#F5F2EA] md:text-base">{product.price}</span>
               {product.originalPrice && <span className="text-[10px] text-[#6B6B6B] line-through md:text-xs">{product.originalPrice}</span>}
             </div>
