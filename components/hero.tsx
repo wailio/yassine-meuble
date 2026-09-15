@@ -14,9 +14,9 @@ export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   
   const heroImages = [
-    "/images/home-hero-salon-1.png",
-    "/images/home-hero-salon-2.png",
-    "/images/home-hero-salon-3.png",
+    "/images/home-hero-bedroom-1.png",
+    "/images/home-hero-bedroom-2.png",
+    "/images/home-hero-bedroom-3.png",
   ]
   const mobileHeroImages = [
     "/images/home-hero-salon-1.png",
