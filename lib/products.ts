@@ -19,7 +19,7 @@ export interface Product {
   colors?: ProductColorVariant[]
 }
 
-const image = (_url: string) => ["/images/art-home-living-room.png"]
+const image = (_url: string) => ["/images/product-im-v2.png"]
 
 export const allProducts: Product[] = [
   {
@@ -79,7 +79,7 @@ export const allProducts: Product[] = [
     category: "chambres",
     colors: [
       {
-        name: "Marron",
+        name: "Gris anthracite",
         swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2027%20ao%C3%BBt%202026%2C%2017_03_15-kXTf0ZJntC10a9wHG8mCCgeDSn1FhY.png",
         images: [
           "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1111-2UWudiyRT3t8bgQdgdMFPcsmPzNeXQ.jpeg",
@@ -120,7 +120,7 @@ export const allProducts: Product[] = [
     category: "chambres",
     colors: [
       {
-        name: "Marron",
+        name: "Gris anthracite",
         swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2027%20ao%C3%BBt%202026%2C%2017_03_15-kXTf0ZJntC10a9wHG8mCCgeDSn1FhY.png",
         images: [
           "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/11-twYEihNhN6JKPG4cvxfmNk00Jk97yH.jpeg",
@@ -410,7 +410,7 @@ export const allProducts: Product[] = [
     category: "salle-a-manger",
     colors: [
       {
-        name: "Marron",
+        name: "Gris anthracite",
         swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2027%20ao%C3%BBt%202026%2C%2017_03_15-OX5UIEix2IkaRSzhoBTX5Hv6FDw1EK.png",
         images: [
           "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/a.JPG-ABNYFIcg0RLIn2CIhQjNQtn7bT4kR5.jpeg",
@@ -512,12 +512,12 @@ export const allProducts: Product[] = [
     category: "salle-a-manger",
     colors: [
       {
-        name: "Marron",
+        name: "Gris anthracite",
         swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TKWE6797.JPG-IRzF9oX8NFenJrAFjAgZ6zYYFEICBB.jpeg",
         images: image("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TKWE6797.JPG-IRzF9oX8NFenJrAFjAgZ6zYYFEICBB.jpeg"),
       },
       {
-        name: "Marron — Design 2",
+        name: "Gris anthracite — Design 2",
         swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1111.JPG-zPgG86jvKFpCxPFIJrPInjNmN26Ymx.jpeg",
         images: [
           "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1111.JPG-zPgG86jvKFpCxPFIJrPInjNmN26Ymx.jpeg",
@@ -571,7 +571,7 @@ export const allProducts: Product[] = [
         ],
       },
       {
-        name: "Marron",
+        name: "Gris anthracite",
         swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2029%20ao%C3%BBt%202026%2C%2023_10_31-fKF9gOfaqT5YW3IB4WS7CN1U1raSDT.png",
         images: [
           "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/BWDQ0350.JPG-zZwkK4flU5vNvlr2lnsZfPkUy2EB2b.jpeg",
@@ -589,7 +589,7 @@ export const allProducts: Product[] = [
     category: "salle-a-manger",
     colors: [
       {
-        name: "Marron",
+        name: "Gris anthracite",
         swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2027%20ao%C3%BBt%202026%2C%2017_03_15-OX5UIEix2IkaRSzhoBTX5Hv6FDw1EK.png",
         images: ["/products/pr1.jpg", "/products/pr11.jpg"],
       },
@@ -605,7 +605,7 @@ export const allProducts: Product[] = [
     category: "salle-a-manger",
     colors: [
       {
-        name: "Marron",
+        name: "Gris anthracite",
         swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2027%20ao%C3%BBt%202026%2C%2017_03_15-9lHi3qs18YXZbiHKvMoLPW3lGZziWs.png",
         images: ["/products/pr2.jpg", "/products/pr22.jpg", "/products/pr222.jpg"],
       },
@@ -625,7 +625,7 @@ export const allProducts: Product[] = [
     category: "salle-a-manger",
     colors: [
       {
-        name: "Marron",
+        name: "Gris anthracite",
         swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.1-NysuNxNOY2aytJaIkkI3XnbeXQPmIY.jpg",
         images: [
           "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/.1-NysuNxNOY2aytJaIkkI3XnbeXQPmIY.jpg",
@@ -721,7 +721,7 @@ export const allProducts: Product[] = [
     category: "armoire",
     colors: [
       {
-        name: "Marron",
+        name: "Gris anthracite",
         swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/brown-f4wJJL7SLcV97qpM8UErfd4g2ySnBo.png",
         images: [
           "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/689263451_18155070256461991_6502792337098745532_n-vCRlnDP6Hkm8eODpYp0zjQD1K3w4dw.jpg",
@@ -743,7 +743,7 @@ export const allProducts: Product[] = [
     category: "armoire",
     colors: [
       {
-        name: "Marron",
+        name: "Gris anthracite",
         swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/brown-f4wJJL7SLcV97qpM8UErfd4g2ySnBo.png",
         images: [
           "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/686289576_18155070208461991_4416137747890154382_n-7mplXZnVYQdSjfJpkpo8WWVHnAnAcY.jpg",
@@ -763,7 +763,7 @@ export const allProducts: Product[] = [
     category: "armoire",
     colors: [
       {
-        name: "Marron",
+        name: "Gris anthracite",
         swatch: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/brown-f4wJJL7SLcV97qpM8UErfd4g2ySnBo.png",
         images: [
           "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/686419824_18155070265461991_2788758347228807228_n-Ll0ZYz4ZIY8szaaQCGIQIM1gFYntwp.jpg",
@@ -798,10 +798,42 @@ export const allProducts: Product[] = [
     dimension: "Composition 2 tables",
     category: "accessories",
   },
+  {
+    id: 44,
+    name: "Chambre à coucher NÉBULEUSE",
+    price: "94,990 DZD",
+    originalPrice: "114,990 DZD",
+    images: image("/images/product-im-v2.png"),
+    description: "Ensemble chambre moderne avec lit double, chevets et rangements coordonnés.",
+    dimension: "Armoire 2m40",
+    discount: 17,
+    category: "chambres",
+    colors: [{ name: "Charbon", swatch: "/images/color-swatch-charcoal.png", images: ["/images/product-im-v2.png"] }],
+  },
+  {
+    id: 45,
+    name: "Chambre à coucher VELours",
+    price: "102,990 DZD",
+    originalPrice: "124,990 DZD",
+    images: image("/images/product-im-v2.png"),
+    description: "Collection chambre élégante avec tête de lit capitonnée et mobilier assorti.",
+    dimension: "Armoire 2m70",
+    discount: 18,
+    category: "chambres",
+    colors: [{ name: "Charbon", swatch: "/images/color-swatch-charcoal.png", images: ["/images/product-im-v2.png"] }],
+  },
 ].filter((product) => ![
   1, 3, 4, 5, 6, 7, 8, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25,
   26, 27, 28, 29, 30, 31,
-].includes(product.id)) as Product[]
+].includes(product.id)).map((product) => ({
+  ...product,
+  images: ["/images/product-im-v2.png"],
+  colors: product.colors?.map((color) => ({
+    ...color,
+    name: "Gris anthracite",
+    swatch: "/images/color-swatch-charcoal.png",
+  })),
+})) as Product[]
 
 export function getProduct(productId: string | number) {
   return allProducts.find((product) => product.id === Number(productId))

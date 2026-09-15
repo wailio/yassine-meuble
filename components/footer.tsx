@@ -141,9 +141,9 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
             </nav>
             <div className="mt-5 space-y-1 text-xs leading-5 text-[#5c5d5a] lg:text-[13px]">
               <a href="tel:+213558646054" className="block transition-colors hover:text-[#a98661]">0558 64 60 54</a>
-              <a href="mailto:naouihakim044@gmail.com" className="block break-all transition-colors hover:text-[#a98661]">naouihakim044@gmail.com</a>
+              <a href="mailto:contact@yassine-meuble.com" className="block break-all transition-colors hover:text-[#a98661]">contact@yassine-meuble.com</a>
               <p>Koléa, Tipaza</p>
-              <p>Ouvert tous les jours, 10:00–21:30, sauf vendredi 15:00–21:30</p>
+              <p>Ouvert tous les jours, 9:00–17:00</p>
             </div>
             <h3 className="relative mb-3 mt-7 w-fit text-sm font-semibold uppercase tracking-[0.16em] after:absolute after:-bottom-1 after:left-0 after:h-px after:w-5 after:bg-[#c99b4d]">Assistance</h3>
             <nav className="flex flex-col"><FooterLink href="/contact">Livraison & retours</FooterLink><FooterLink href="/contact">Service client</FooterLink></nav>

@@ -143,7 +143,7 @@ export default function ProductDetailContent({ productId }: { productId: string 
           {/* Product Images */}
           <div className="flex flex-col gap-3">
             <div className="relative flex aspect-square items-center justify-center overflow-visible md:overflow-hidden bg-white p-3 md:p-6 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
-              <ProductImageReveal key={selectedColorIndex} src="/images/art-home-living-room.png" alt={`${product.name} — ${selectedColor?.name ?? "Marron"}`} />
+              <ProductImageReveal key={selectedColorIndex} src="/images/product-im-v2.png" alt={`${product.name} — ${selectedColor?.name ?? "Gris anthracite"}`} />
               {galleryImages.length > 1 ? (
                 <>
                   <button
@@ -179,7 +179,7 @@ export default function ProductDetailContent({ productId }: { productId: string 
                         : 'border-2 border-gray-200 hover:border-[#8a6a32]'
                     }`}
                   >
-                    <img src="/images/art-home-living-room.png" alt={`Vue ${idx + 1} de ${product.name}`} className="size-full object-cover" />
+                    <img src="/images/product-im-v2.png" alt={`Vue ${idx + 1} de ${product.name}`} className="size-full object-cover" />
                   </button>
                 ))}
               </div>
@@ -222,7 +222,7 @@ export default function ProductDetailContent({ productId }: { productId: string 
                           onClick={() => { setSelectedColorIndex(index); setSelectedImageIndex(0) }}
                           className={`relative size-9 overflow-hidden rounded-full border-2 bg-white p-0.5 transition-transform ${selectedColorIndex === index ? "border-[#8a6a32] scale-110 shadow-[0_0_0_2px_rgba(138,106,50,0.22)]" : "border-gray-300 hover:border-[#8a6a32]"}`}
                         >
-                          <img src="/images/art-home-living-room.png" alt="" aria-hidden="true" className="size-full rounded-full object-cover" />
+                          <img src="/images/color-swatch-charcoal.png" alt="" aria-hidden="true" className="size-full rounded-full object-cover" />
                         </button>
                       ))}
                     </div>
@@ -246,7 +246,7 @@ export default function ProductDetailContent({ productId }: { productId: string 
                 <input type="number" value={quantity} onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))} className="w-10 text-center border-l border-r border-gray-300 py-1.5 text-sm text-black" min="1" />
                 <button onClick={() => setQuantity(quantity + 1)} className="px-2 md:px-3 py-1.5 text-gray-600 hover:bg-gray-100 text-sm">+</button>
               </div>
-              <Link href={`/contact?subject=Commande&message=${encodeURIComponent(`Je souhaite commander ce produit: ${product.name} (${selectedColor?.name ?? "Marron"})`)}#form`}>
+              <Link href={`/contact?subject=Commande&message=${encodeURIComponent(`Je souhaite commander ce produit: ${product.name} (${selectedColor?.name ?? "Gris anthracite"})`)}#form`}>
                 <button className="flex-1 md:flex-auto px-6 md:px-8 py-2 md:py-2.5 bg-[#1E1912] hover:bg-[#00030A] text-white font-semibold rounded-lg transition-colors text-sm md:text-base">Commandez maintenant</button>
               </Link>
             </div>
@@ -271,7 +271,7 @@ export default function ProductDetailContent({ productId }: { productId: string 
                         : 'border-2 border-gray-200 hover:border-[#8a6a32]'
                     }`}
                   >
-                    <img src="/images/art-home-living-room.png" alt={`Vue ${idx + 1} de ${product.name}`} className="size-full object-cover" />
+                    <img src="/images/product-im-v2.png" alt={`Vue ${idx + 1} de ${product.name}`} className="size-full object-cover" />
                   </button>
                 ))}
               </div>
@@ -299,7 +299,7 @@ export default function ProductDetailContent({ productId }: { productId: string 
                     <div className="group flex-shrink-0 w-32 md:w-40 bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col">
                     <div className="relative aspect-square w-full bg-white overflow-hidden rounded-t-lg">
                       {relProduct.discount && <div className="absolute top-1.5 left-1.5 bg-red-600 text-white px-1.5 py-0.5 rounded text-[10px] font-bold z-10">-{relProduct.discount}%</div>}
-                      <img src="/images/art-home-living-room.png" alt={relProduct.name} className="h-full w-full scale-110 object-cover mix-blend-multiply transition-transform duration-300 group-hover:scale-[1.16]" />
+                      <img src="/images/product-im-v2.png" alt={relProduct.name} className="h-full w-full scale-110 object-cover mix-blend-multiply transition-transform duration-300 group-hover:scale-[1.16]" />
                       <button onClick={(e) => { e.preventDefault(); toggleFavorite(relProduct.id) }} className="absolute top-1.5 right-1.5 bg-white rounded-full p-1.5 hover:bg-gray-100 transition-colors">
                         <Heart className={`w-3 h-3 ${favorites.includes(relProduct.id) ? "fill-red-600 text-red-600" : "text-gray-600"}`} />
                       </button>

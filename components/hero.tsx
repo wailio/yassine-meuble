@@ -14,14 +14,14 @@ export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   
   const heroImages = [
-    "/images/home-hero-salon-1.png",
-    "/images/home-hero-salon-2.png",
-    "/images/home-hero-salon-3.png",
+    "/images/home-hero-bedroom-1.png",
+    "/images/home-hero-bedroom-2.png",
+    "/images/home-hero-bedroom-3.png",
   ]
   const mobileHeroImages = [
-    "/images/home-hero-salon-1.png",
-    "/images/home-hero-salon-2.png",
-    "/images/home-hero-salon-3.png",
+    "/images/mobile-hero-bedroom-1.png",
+    "/images/mobile-hero-bedroom-2.png",
+    "/images/mobile-hero-bedroom-3.png",
   ]
 
   useEffect(() => {
@@ -99,7 +99,7 @@ export default function Hero() {
 
         {/* Image carousel indicators */}
         <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
-          {heroImages.map((_, index) => (
+          {(typeof window !== "undefined" && window.innerWidth < 768 ? mobileHeroImages : heroImages).map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentImageIndex(index)}
@@ -115,20 +115,18 @@ export default function Hero() {
       </div>
 
       {/* Delivery Banner */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-[#1E1912] via-[#2c2418] to-[#8b7344] text-white md:px-6 md:py-6 before:pointer-events-none before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.12),transparent_55%)] before:opacity-60">
-        <div className="relative hidden md:block">
-          <Reveal delay={480} className="mx-auto max-w-6xl">
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
-              <div className="delivery-benefit flex items-center justify-center gap-3">
-                <Check className="delivery-benefit-icon h-5 w-5 flex-shrink-0 text-[#7E8EA6] md:h-6 md:w-6" />
-                <span className="text-xs font-medium text-white md:text-base">Livraison + montage dans les 58 wilayas</span>
-              </div>
-              <div className="delivery-benefit flex items-center justify-center gap-3 [animation-delay:1.1s]">
-                <Truck className="delivery-benefit-icon h-5 w-5 flex-shrink-0 text-[#7E8EA6] md:h-6 md:w-6" />
-                <span className="text-xs font-medium text-white md:text-base">Gratuit sur Alger ...</span>
-              </div>
-            </div>
-          </Reveal>
+      <div className="relative overflow-hidden bg-gradient-to-r from-[#1E1912] via-[#2c2418] to-[#8b7344] text-white md:px-6 before:pointer-events-none before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.12),transparent_55%)] before:opacity-60">
+        <div className="relative hidden overflow-hidden py-4 md:block">
+          <div className="delivery-marquee delivery-marquee-right flex w-max items-center gap-10 whitespace-nowrap">
+            {Array.from({ length: 5 }).map((_, index) => (
+              <span key={index} className="flex items-center gap-4 text-sm font-semibold uppercase tracking-[0.16em] text-[#f8f3e8] md:text-base">
+                <Check className="h-5 w-5 text-[#d1aa5c]" /> Livraison + montage dans les 58 wilayas
+                <span className="text-[#d1aa5c]">✦</span>
+                <Truck className="h-5 w-5 text-[#d1aa5c]" /> Gratuit sur Alger, Blida, Boumerdès, Médéa &amp; Tipaza
+                <span className="text-[#d1aa5c]">◆</span>
+              </span>
+            ))}
+          </div>
         </div>
         <div className="relative space-y-px overflow-hidden md:hidden">
           <div className="border-b border-white/10 bg-black/10 py-3">

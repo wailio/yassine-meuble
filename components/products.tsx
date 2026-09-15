@@ -228,20 +228,20 @@ const legacyProducts: LegacyProduct[] = [
 function ProductCard({ product, favorites, toggleFavorite, immediate = false }: { product: Product; favorites: number[]; toggleFavorite: (id: number) => void; immediate?: boolean }) {
   const card = (
     <Link href={`/product/${product.id}`}>
-      <div className="group flex h-[300px] flex-shrink-0 w-56 flex-col overflow-hidden rounded-none bg-[#1A1A1A] transition-colors duration-300 cursor-pointer md:h-auto md:w-[350px]">
-          <div className="relative aspect-[4/3] w-full items-center justify-center overflow-hidden bg-[#111111]">
+      <div className="group flex h-[260px] flex-shrink-0 w-56 flex-col overflow-hidden rounded-none bg-[#1A1A1A] transition-colors duration-300 cursor-pointer md:h-auto md:w-[350px]">
+          <div className="relative h-[150px] w-full items-center justify-center overflow-hidden bg-[#111111] md:aspect-[4/3] md:h-auto">
             {product.discount && <div className="absolute left-2 top-2 z-10 rounded bg-[rgba(15,15,15,0.85)] px-2.5 py-1 text-[10px] font-bold text-white">-{product.discount}%</div>}
-            <img src="/images/art-home-living-room.png" alt={product.name} className="h-full w-full object-cover transition-[filter] duration-300 group-hover:brightness-105" />
+            <img src="/images/product-im-v2.png" alt={product.name} className="h-full w-full object-cover transition-[filter] duration-300 group-hover:brightness-105" />
             <button onClick={(e) => { e.preventDefault(); toggleFavorite(product.id) }} aria-label={`Ajouter ${product.name} aux favoris`} className="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-[rgba(0,0,0,0.4)] transition-colors hover:bg-[rgba(0,0,0,0.6)]">
               <Heart className={`h-4 w-4 ${favorites.includes(product.id) ? "fill-white text-white" : "text-white"}`} />
             </button>
           </div>
-          <div className="flex flex-1 flex-col justify-between bg-[#1A1A1A] p-4 md:p-5">
+          <div className="flex flex-1 flex-col justify-start bg-[#1A1A1A] p-3 md:p-5">
             <div>
               <p className="mb-1 text-[9px] uppercase tracking-[0.12em] text-[#A8926A]">IdealInstitute</p>
               <h3 className="line-clamp-2 text-sm font-bold text-[#F5F2EA] md:text-base">{product.name}</h3>
             </div>
-            <div className="mt-5 flex items-center gap-3">
+            <div className="mt-1 flex items-center gap-3 md:mt-5">
               <span className="text-sm font-bold text-[#F5F2EA] md:text-base">{product.price}</span>
               {product.originalPrice && <span className="text-[10px] text-[#6B6B6B] line-through md:text-xs">{product.originalPrice}</span>}
             </div>
@@ -310,7 +310,7 @@ export default function Products() {
   }
 
   // Feature the new Eclipse bedroom in the main homepage product lane so it is visible without relying on the secondary section.
-  const nosProduits = catalogProducts.filter(
+  const nosProduits = catalogProducts.map((product) => ({ ...product, images: ["/images/product-im-v2.png"] })).filter(
     (p) => p.category === "sofas" || p.category === "salle-a-manger" || p.id === 6,
   )
   const modelesPrets = catalogProducts
@@ -333,7 +333,7 @@ export default function Products() {
               type="button"
               aria-label="Produits précédents"
               onClick={() => scrollNosProduits("left")}
-              className="absolute left-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:left-[4%] md:right-auto md:top-1/2 md:h-10 md:w-10 md:-translate-y-1/2"
+              className="absolute left-1 top-1/2 z-10 hidden h-9 w-9 -translate-y-1/2 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:flex md:left-[4%] md:right-auto md:top-1/2 md:h-10 md:w-10 md:-translate-y-1/2"
             >
               <ChevronLeft className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -341,7 +341,7 @@ export default function Products() {
               type="button"
               aria-label="Produits suivants"
               onClick={() => scrollNosProduits("right")}
-              className="absolute right-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:right-[4%] md:top-1/2 md:h-10 md:w-10 md:-translate-y-1/2"
+              className="absolute right-1 top-1/2 z-10 hidden h-9 w-9 -translate-y-1/2 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:flex md:right-[4%] md:top-1/2 md:h-10 md:w-10 md:-translate-y-1/2"
             >
               <ChevronRight className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -377,7 +377,7 @@ export default function Products() {
               type="button"
               aria-label="Modèles précédents"
               onClick={() => scrollModelesPrets("left")}
-              className="absolute left-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:left-[4%] md:right-auto md:top-1/2 md:h-10 md:w-10 md:-translate-y-1/2"
+              className="absolute left-1 top-1/2 z-10 hidden h-9 w-9 -translate-y-1/2 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:flex md:left-[4%] md:right-auto md:top-1/2 md:h-10 md:w-10 md:-translate-y-1/2"
             >
               <ChevronLeft className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -385,7 +385,7 @@ export default function Products() {
               type="button"
               aria-label="Modèles suivants"
               onClick={() => scrollModelesPrets("right")}
-              className="absolute right-1 top-1/2 z-10 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:right-[4%] md:top-1/2 md:h-10 md:w-10 md:-translate-y-1/2"
+              className="absolute right-1 top-1/2 z-10 hidden h-9 w-9 -translate-y-1/2 items-center justify-center rounded-[4px] bg-[#E8E6E0] text-[#1A1A1A] transition-colors hover:bg-[#F0EDE6] md:flex md:right-[4%] md:top-1/2 md:h-10 md:w-10 md:-translate-y-1/2"
             >
               <ChevronRight className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -413,7 +413,7 @@ export default function Products() {
         <Reveal delay={200}>
           <div className="mt-8 md:mt-12 flex justify-center">
             <Link href="/all-products">
-              <button className="border-2 border-white text-white px-8 md:px-12 py-2 md:py-3 font-serif uppercase text-xs md:text-sm tracking-widest hover:bg-gray-900 hover:text-white transition-all duration-300">
+              <button className="border-2 border-white text-white px-8 md:px-12 py-2 md:py-3 font-serif uppercase text-xs md:text-sm tracking-widest hover:border-[#8f6b32] hover:bg-[#8f6b32] hover:text-white focus-visible:border-[#8f6b32] focus-visible:bg-[#8f6b32] focus-visible:text-white transition-all duration-300">
               SHOW ALL PRODUCTS
               </button>
             </Link>
