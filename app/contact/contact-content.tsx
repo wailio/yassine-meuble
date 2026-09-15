@@ -11,9 +11,9 @@ import { Reveal } from "@/components/Reveal"
 
 const contactDetails = [
   { icon: Phone, label: "Téléphone", value: "0558 64 60 54" },
-  { icon: Mail, label: "Email", value: "naouihakim044@gmail.com" },
+  { icon: Mail, label: "Email", value: "contact@yassine-meuble.com" },
   { icon: MapPin, label: "Adresse", value: "Koléa, Tipaza" },
-  { icon: Clock3, label: "Horaires", value: "10:00–21:30 (sauf vendredi 15:00–21:30)" },
+  { icon: Clock3, label: "Horaires", value: "9:00–17:00" },
 ]
 
 export default function ContactContent() {
