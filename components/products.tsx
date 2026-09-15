@@ -231,7 +231,7 @@ function ProductCard({ product, favorites, toggleFavorite, immediate = false }: 
       <div className="group flex h-[300px] flex-shrink-0 w-56 flex-col overflow-hidden rounded-none bg-[#1A1A1A] transition-colors duration-300 cursor-pointer md:h-auto md:w-[350px]">
           <div className="relative aspect-[4/3] w-full items-center justify-center overflow-hidden bg-[#111111]">
             {product.discount && <div className="absolute left-2 top-2 z-10 rounded bg-[rgba(15,15,15,0.85)] px-2.5 py-1 text-[10px] font-bold text-white">-{product.discount}%</div>}
-            <img src="/images/art-home-living-room.png" alt={product.name} className="h-full w-full object-cover transition-[filter] duration-300 group-hover:brightness-105" />
+            <img src="/images/product-im-v2.png" alt={product.name} className="h-full w-full object-cover transition-[filter] duration-300 group-hover:brightness-105" />
             <button onClick={(e) => { e.preventDefault(); toggleFavorite(product.id) }} aria-label={`Ajouter ${product.name} aux favoris`} className="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-[rgba(0,0,0,0.4)] transition-colors hover:bg-[rgba(0,0,0,0.6)]">
               <Heart className={`h-4 w-4 ${favorites.includes(product.id) ? "fill-white text-white" : "text-white"}`} />
             </button>
@@ -310,7 +310,7 @@ export default function Products() {
   }
 
   // Feature the new Eclipse bedroom in the main homepage product lane so it is visible without relying on the secondary section.
-  const nosProduits = catalogProducts.filter(
+  const nosProduits = catalogProducts.map((product) => ({ ...product, images: ["/images/product-im-v2.png"] })).filter(
     (p) => p.category === "sofas" || p.category === "salle-a-manger" || p.id === 6,
   )
   const modelesPrets = catalogProducts
