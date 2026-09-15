@@ -113,16 +113,16 @@ export default function ContactContent() {
       <section className="mx-auto max-w-6xl px-4 py-6 md:px-8 md:py-20">
         <Reveal delay={120}>
           <div className="mb-6 text-center md:mb-12">
-            <p className="font-serif text-2xl leading-none text-[#b07a24]/70 md:text-7xl">Contact</p>
+            <p className="font-serif text-2xl leading-none text-[#6b5838] md:text-7xl">Contact</p>
             <h2 className="-mt-1 text-base font-bold tracking-tight text-white md:text-3xl">Informations de contact</h2>
           </div>
         </Reveal>
 
-        <div className="flex flex-wrap justify-center gap-3 border-y border-[#b07a24]/45 py-4 md:grid md:grid-cols-4 md:gap-0 md:border-y">
+        <div className="flex flex-wrap justify-center gap-3 border-y border-[#40382d] py-4 md:grid md:grid-cols-4 md:gap-0 md:border-y">
           {contactDetails.map(({ icon: Icon, label, value }, index) => (
             <Reveal key={label} variant="pop" delay={index * 80}>
-            <div className="flex flex-col items-center md:border-r md:border-[#b07a24]/45 md:px-5 md:py-8 md:py-6 md:text-center">
-              <div className="mb-1 flex h-8 w-8 items-center justify-center rounded-full border border-[#c08a32] text-[#c08a32] md:mb-4 md:h-12 md:w-12"><Icon className="h-3.5 w-3.5 md:h-5 md:w-5" strokeWidth={1.4} /></div>
+            <div className="flex flex-col items-center md:border-r md:border-[#40382d] md:px-5 md:py-8 md:py-6 md:text-center">
+              <div className="mb-1 flex h-8 w-8 items-center justify-center rounded-full border border-[#a4864b] text-[#a4864b] md:mb-4 md:h-12 md:w-12"><Icon className="h-3.5 w-3.5 md:h-5 md:w-5" strokeWidth={1.4} /></div>
               <p className="text-xs font-semibold text-white md:text-sm">{value}</p>
               <p className="mt-0.5 text-[10px] leading-3 text-[#aaa59d] md:mt-2 md:text-xs md:leading-5">{label}</p>
             </div>
@@ -133,14 +133,14 @@ export default function ContactContent() {
         <div className="mt-8 grid gap-4 md:mt-16 md:gap-10 md:grid-cols-[0.7fr_1.3fr] md:items-start md:gap-16">
           <Reveal>
           <div className="hidden pt-2 md:block">
-            <p className="font-serif text-2xl leading-none text-[#b07a24]/70 md:text-6xl">Form</p>
+            <p className="font-serif text-2xl leading-none text-[#6b5838] md:text-6xl">Form</p>
             <h2 className="-mt-1 text-xl font-bold text-white md:text-3xl">Parlons de votre projet</h2>
             <p className="mt-3 max-w-sm text-xs leading-5 text-[#aaa59d] md:mt-5 md:text-sm md:leading-6">Une question, une idée ou un projet d&apos;aménagement ? Notre équipe vous accompagne avec attention pour trouver les pièces qui vous ressemblent.</p>
-            <div className="mt-6 border-l border-[#c08a32] pl-3 text-xs leading-4 text-[#c08a32] md:mt-8 md:pl-4 md:text-xs md:leading-5">Pourquoi choisir notre boutique ?<br /><span className="text-[#aaa59d]">Qualité premium, conseil personnalisé et design inspirant.</span></div>
+            <div className="mt-6 border-l border-[#a4864b] pl-3 text-xs leading-4 text-[#c0a05e] md:mt-8 md:pl-4 md:text-xs md:leading-5">Pourquoi choisir notre boutique ?<br /><span className="text-[#aaa59d]">Qualité premium, conseil personnalisé et design inspirant.</span></div>
           </div>
           </Reveal>
           <Reveal className="md:hidden mb-2 text-center">
-            <p className="font-serif text-xl leading-none text-[#b07a24]/70">Form</p>
+            <p className="font-serif text-xl leading-none text-[#6b5838]">Form</p>
             <h2 className="-mt-0.5 text-sm font-bold text-white">Parlons de votre projet</h2>
           </Reveal>
 
@@ -169,22 +169,22 @@ export default function ContactContent() {
               </div>
             </Reveal>
             <Reveal delay={300}>
-              <div className="flex justify-start pt-1"><Button type="submit" disabled={status === "sending"} className="rounded-full bg-[#a87322] px-8 py-3 text-xs font-medium text-[#f6f1e9] hover:bg-[#c18a31]">{status === "sending" ? "Envoi..." : "Envoyer le message"}</Button></div>
+              <div className="flex justify-start pt-1"><Button type="submit" disabled={status === "sending"} className="rounded-full bg-[#e9b83f] px-8 py-3 text-xs font-medium text-[#1b1b1b] hover:bg-[#f1c752]">{status === "sending" ? "Envoi..." : "Envoyer le message"}</Button></div>
             </Reveal>
-            {status === "success" && <p className="text-xs text-[#b07a24]" role="status">Message envoyé.</p>}
+            {status === "success" && <p className="text-xs text-[#c0a05e]" role="status">Message envoyé.</p>}
 
           </form>
         </div>
 
-        <div className="mt-8 mb-16 overflow-hidden rounded-2xl border border-[#b07a24]/45 md:mt-16 md:mb-12">
+        <div className="mt-8 mb-16 overflow-hidden rounded-2xl border border-[#40382d] md:mt-16 md:mb-12">
           <MapReveal src="https://www.google.com/maps?q=Koléa,+Tipaza&output=embed" title="Yassine Meubles à Koléa, Tipaza" />
         </div>
       </section>
 
       {isWhatsappModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#080706]/80 p-4" role="dialog" aria-modal="true" aria-labelledby="whatsapp-modal-title">
-          <div className="relative flex w-full max-w-md flex-col items-center rounded-2xl border border-[#a87322] bg-[#17130f] p-6 text-center shadow-2xl md:p-8">
-            <button type="button" onClick={closeWhatsappModal} aria-label="Fermer" className="absolute right-4 top-4 rounded-full p-1 text-[#b07a24] transition-colors hover:bg-[#a87322]/15 hover:text-white"><X className="h-5 w-5" /></button>
+          <div className="relative flex w-full max-w-md flex-col items-center rounded-2xl border border-[#40382d] bg-[#17130f] p-6 text-center shadow-2xl md:p-8">
+            <button type="button" onClick={closeWhatsappModal} aria-label="Fermer" className="absolute right-4 top-4 rounded-full p-1 text-[#a4864b] transition-colors hover:bg-[#a4864b]/15 hover:text-white"><X className="h-5 w-5" /></button>
             <h2 id="whatsapp-modal-title" className="pr-6 text-xl font-bold text-white md:text-2xl">Scannez pour envoyer votre message</h2>
             <p className="mt-3 text-sm leading-6 text-[#aaa59d]">Ouvrez l&apos;appareil photo de votre téléphone et scannez ce code pour envoyer votre message directement sur WhatsApp.</p>
             <div className="mt-6 rounded-xl bg-[#f7f4ed] p-4">
@@ -206,7 +206,7 @@ export default function ContactContent() {
                 />
               )}
             </div>
-            <a href={whatsappUrl} target="_blank" rel="noreferrer" onClick={closeWhatsappModal} className="mt-5 text-xs text-[#b07a24] underline underline-offset-4 hover:text-white">Vous avez WhatsApp Web ? Cliquez ici</a>
+            <a href={whatsappUrl} target="_blank" rel="noreferrer" onClick={closeWhatsappModal} className="mt-5 text-xs text-[#c0a05e] underline underline-offset-4 hover:text-white">Vous avez WhatsApp Web ? Cliquez ici</a>
           </div>
         </div>
       )}
