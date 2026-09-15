@@ -6,11 +6,23 @@ import { Reveal } from '@/components/Reveal'
 import { PopTitle } from '@/components/pop-title'
 
 const mobileReviews = [
-  { author: "Adem", rating: 5, years: "il y a 4 mois", text: "" },
-  { author: "Aura Mode", rating: 5, years: "il y a 5 mois", text: "" },
-  { author: "Melissa Chikh chouk", rating: 5, years: "il y a 5 mois", text: "" },
-  { author: "سميرة حموش", rating: 5, years: "il y a 5 mois", text: "" },
+  { author: "Nadia Bensaïd", rating: 5, years: "il y a 2 semaines", text: "Très belle qualité et une finition soignée. Notre nouveau salon est exactement comme nous l'imaginions." },
+  { author: "Karim Amrani", rating: 4.5, years: "il y a 1 mois", text: "Une équipe professionnelle et de bons conseils. La livraison s'est bien passée et le canapé est magnifique." },
+  { author: "Sonia Belkacem", rating: 4, years: "il y a 2 mois", text: "J'ai trouvé une table élégante à un prix raisonnable. Le résultat apporte beaucoup de style à notre salle à manger." },
+  { author: "Yacine Haddad", rating: 3.5, years: "il y a 3 mois", text: "Le meuble correspond bien aux photos et le service était agréable. Quelques jours d'attente, mais une bonne expérience." },
+  { author: "Lina Saïdi", rating: 5, years: "il y a 3 semaines", text: "Je recommande vivement Yassine Meubles. Les conseils en magasin et la qualité des matériaux sont au rendez-vous." },
+  { author: "Mehdi Ferhat", rating: 4.5, years: "il y a 4 mois", text: "Des meubles modernes et confortables. L'équipe a pris le temps de nous aider à choisir les bonnes dimensions." },
+  { author: "Amel Cherif", rating: 4, years: "il y a 5 mois", text: "Très contente de mon achat, avec un design sobre et une belle couleur. Le service client a été réactif." },
 ]
+
+const renderStars = (rating: number, size = "h-[18px] w-[18px]") =>
+  Array.from({ length: 5 }, (_, index) => (
+    <Star
+      key={index}
+      className={`${size} fill-[#b4883d] text-[#b4883d] ${index + 1 > rating ? "opacity-40" : ""}`}
+      aria-hidden="true"
+    />
+  ))
 
 export default function CustomerReviews() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -20,10 +32,7 @@ export default function CustomerReviews() {
   const desktopDragStart = useRef<number | null>(null)
   const desktopDragOrigin = useRef(0)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
-  const desktopReviews = mobileReviews.map((review) => ({
-    ...review,
-    text: review.text || 'Une expérience magnifique, un mobilier élégant et un service attentif. Nous sommes ravis de notre choix.',
-  }))
+  const desktopReviews = mobileReviews
 
   useEffect(() => {
     const isDesktop = window.matchMedia("(min-width: 768px)").matches
@@ -104,7 +113,7 @@ export default function CustomerReviews() {
                   <div className={`flex ${isDragging ? '' : 'transition-transform duration-500 ease-out'}`} style={{ transform: `translateX(calc(-${desktopIndex * 100}% + ${desktopDragOffset}px))` }}>
                     {desktopReviews.map((review) => (
                       <article key={review.author} className="w-full shrink-0 pr-6">
-                        <div className="mb-5 flex gap-1" aria-label={`${review.rating} étoiles`}>{Array.from({ length: review.rating }, (_, index) => <Star key={index} className="h-[18px] w-[18px] fill-[#b4883d] text-[#b4883d]" aria-hidden="true" />)}</div>
+                        <div className="mb-5 flex gap-1" aria-label={`${review.rating} étoiles`}>{renderStars(review.rating)}</div>
                         <p className="min-h-[62px] max-w-[520px] font-sans text-[13px] leading-5 text-[#5f5c57]">&quot;{review.text}&quot;</p>
                         <div className="mt-7 border-t border-[#ddd7cd] pt-7">
                           <div className="flex items-center gap-3"><div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#b4883d] font-serif text-sm text-[#fffaf2]" aria-hidden="true">{review.author.slice(0, 2).toUpperCase()}</div><div><p className="font-sans text-[13px] font-semibold text-[#202020]">{review.author}</p><p className="mt-0.5 font-sans text-[11px] text-[#8b8780]">{review.years}</p></div><span className="ml-auto pr-2 font-serif text-6xl leading-none text-[#ebe5db]" aria-hidden="true">&quot;</span></div>
@@ -167,9 +176,7 @@ export default function CustomerReviews() {
           <div className="relative mx-auto max-w-sm px-5">
             <div className="min-h-[230px] rounded-xl border border-white/[0.08] bg-[#161616] p-5 text-center shadow-[0_12px_30px_rgba(0,0,0,0.22)] transition-opacity duration-400 ease-in-out">
               <div className="mb-5 flex justify-center gap-1" aria-label={`${mobileReviews[currentIndex].rating} étoiles`}>
-                {Array.from({ length: mobileReviews[currentIndex].rating }, (_, index) => (
-                  <Star key={index} className="h-4 w-4 fill-[#A8823F] text-[#A8823F]" aria-hidden="true" />
-                ))}
+                {renderStars(mobileReviews[currentIndex].rating, "h-4 w-4")}
               </div>
               <p className="text-pretty font-sans text-sm leading-6 text-[#B0B0B0]">&quot;{mobileReviews[currentIndex].text}&quot;</p>
               <div className="mt-6"><p className="font-sans text-sm font-bold text-[#F0EDE6]">{mobileReviews[currentIndex].author}</p><p className="font-sans text-xs text-[#807b72]">{mobileReviews[currentIndex].years}</p></div>
