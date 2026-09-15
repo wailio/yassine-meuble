@@ -60,7 +60,7 @@ export function DesignStories() {
           <span className="size-1.5 rounded-full bg-[#b79357]" aria-hidden="true" />
           Design Stories
         </span>
-        <h2 className="text-3xl font-semibold tracking-tight text-neutral-800 md:text-[2.5rem] md:leading-tight">
+        <h2 className="text-2xl font-semibold tracking-tight text-neutral-800 md:text-[2.5rem] md:leading-tight">
           <PopTitle text="Modern Living Inspirations" />
         </h2>
       </div>

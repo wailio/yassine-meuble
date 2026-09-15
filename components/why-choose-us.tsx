@@ -80,7 +80,7 @@ export default function WhyChooseUs() {
           <Reveal variant="pop" delay={0}>
           <div className="bg-[#e5e7eb] p-3 border-b border-[#cbd5e1] flex items-start gap-3">
             <div className="flex-shrink-0 pt-1">
-              <div className="text-xl text-[#6b7280] icon-3d transition-transform duration-200">✦</div>
+              <div className="text-xl text-[#8f6b32] icon-3d transition-transform duration-200">✦</div>
             </div>
             <div>
               <h3 className="text-xs font-semibold text-[#1f2937] mb-0.5">Solutions Complètes</h3>
@@ -91,7 +91,7 @@ export default function WhyChooseUs() {
           <Reveal variant="pop" delay={100}>
           <div className="bg-[#e5e7eb] p-3 border-b border-[#cbd5e1] flex items-start gap-3">
             <div className="flex-shrink-0 pt-1">
-              <div className="text-xl text-[#6b7280] icon-3d transition-transform duration-200">◆</div>
+              <div className="text-xl text-[#8f6b32] icon-3d transition-transform duration-200">◆</div>
             </div>
             <div>
               <h3 className="text-xs font-semibold text-[#1f2937] mb-0.5">Support 24/7</h3>
@@ -102,7 +102,7 @@ export default function WhyChooseUs() {
           <Reveal variant="pop" delay={200}>
           <div className="bg-[#e5e7eb] p-3 flex items-start gap-3">
             <div className="flex-shrink-0 pt-1">
-              <div className="text-xl text-[#6b7280] icon-3d transition-transform duration-200">★</div>
+              <div className="text-xl text-[#8f6b32] icon-3d transition-transform duration-200">★</div>
             </div>
             <div>
               <h3 className="text-xs font-semibold text-[#1f2937] mb-0.5">Qualité Supérieure</h3>
