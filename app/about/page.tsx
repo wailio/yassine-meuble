@@ -186,8 +186,8 @@ export default function AboutPage() {
               }}
             >
               <Image
-                src="/images/art-home-storefront.png"
-                alt="Our Story"
+                src="/images/about-bedroom.png"
+                alt="Cream upholstered bed in a warm modern bedroom"
                 width={500}
                 height={400}
                 className="h-auto w-full object-contain md:h-full md:object-cover"
